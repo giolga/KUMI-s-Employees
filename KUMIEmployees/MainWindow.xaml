@@ -1,0 +1,47 @@
+﻿<Window x:Class="KUMIEmployees.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:KUMIEmployees"
+        xmlns:uc="clr-namespace:KUMIEmployees.UserControls" 
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <TabControl>
+
+            <TabItem Header="Show All">
+                <Grid Width="730" HorizontalAlignment="Center">
+                    <Label Content="Show All"/>
+
+                    <DataGrid x:Name="ShowAllDG" AutoGenerateColumns="False"  CanUserAddRows="False" SelectionUnit="Cell" VerticalScrollBarVisibility="Auto" Height="400">
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Header="Employee Id" Binding="{Binding Id}" Width="75"/>
+                            <DataGridTextColumn Header="Name" Binding="{Binding Name}" Width="75"/>
+                            <DataGridTextColumn Header="Surename" Binding="{Binding Surename}" Width="90"/>
+                            <DataGridTextColumn Header="Gmail" Binding="{Binding Email}" Width="160"/>
+                            <DataGridTextColumn Header="Job Position" Binding="{Binding JobPosition}" Width="80"/>
+                            <DataGridTextColumn Header="Telephone Number" Binding="{Binding Tel}"/>
+                            <DataGridTextColumn Header="Salary" Binding="{Binding Salary}" Width="50"/>
+                            <DataGridTextColumn Header="Bonus" Width="*" Binding="{Binding Bonus}" />
+                        </DataGrid.Columns>
+                    </DataGrid>
+                </Grid>
+            </TabItem>
+
+            <TabItem Header="Add Employee">
+                <!--<Label Content="POST"/>-->
+                <uc:AddEmployee />
+
+            </TabItem>
+
+            <TabItem Header="Get Employee">
+                <Label Content="GET"/>
+            </TabItem>
+
+            <TabItem Header="Delete Employee">
+                <Label Content="DELETE"/>
+            </TabItem>
+        </TabControl>
+    </Grid>
+</Window>
