@@ -125,5 +125,11 @@
     <Resource Include="EmployeeList\names.txt" />
     <Resource Include="EmployeeList\surenames.txt" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Gender\male.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Gender\female.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

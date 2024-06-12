@@ -62,14 +62,14 @@ namespace KUMIEmployees.UserControls
                     SurenameTB.Background = (SolidColorBrush)(new BrushConverter().ConvertFrom("#DADADA"));
                 }
             }
-            else if (GenderTB.Text.Trim().Equals(""))
-            {
-                GenderTB.Background = Brushes.Pink;
-                if (MessageBox.Show("Empty Field!\nPLease Enter the Employee name", "Error", MessageBoxButton.OK) == MessageBoxResult.OK)
-                {
-                    GenderTB.Background = (SolidColorBrush)(new BrushConverter().ConvertFrom("#DADADA"));
-                }
-            }
+            //else if (GenderTB.Text.Trim().Equals(""))
+            //{
+            //    GenderTB.Background = Brushes.Pink;
+            //    if (MessageBox.Show("Empty Field!\nPLease Enter the Employee name", "Error", MessageBoxButton.OK) == MessageBoxResult.OK)
+            //    {
+            //        GenderTB.Background = (SolidColorBrush)(new BrushConverter().ConvertFrom("#DADADA"));
+            //    }
+            //}
             else if (BirthTB.Text.Trim().Equals(""))
             {
                 BirthTB.Background = Brushes.Pink;
@@ -117,6 +117,31 @@ namespace KUMIEmployees.UserControls
                 imageUrl = openFileDialog.FileName;
                 MessageBox.Show(openFileDialog.FileName);
             }
+        }
+
+
+        private void MaleRB_Checked(object sender, RoutedEventArgs e)
+        {
+            MaleLbl.FontWeight = FontWeights.Bold;
+            MaleImg.Opacity = 1;
+        }
+
+        private void FemaleRB_Checked(object sender, RoutedEventArgs e)
+        {
+            FemaleLbl.FontWeight = FontWeights.Bold;
+            FemaleImg.Opacity = 1;
+        }
+
+        private void MaleRB_Unchecked(object sender, RoutedEventArgs e)
+        {
+            MaleLbl.FontWeight = FontWeights.Normal;
+            MaleImg.Opacity = 0.5;
+        }
+
+        private void FemaleRB_Unchecked(object sender, RoutedEventArgs e)
+        {
+            FemaleImg.Opacity = 0.5;
+            FemaleLbl.FontWeight = FontWeights.Normal;
         }
     }
 }
