@@ -62,14 +62,16 @@ namespace KUMIEmployees.UserControls
                     SurenameTB.Background = (SolidColorBrush)(new BrushConverter().ConvertFrom("#DADADA"));
                 }
             }
-            //else if (GenderTB.Text.Trim().Equals(""))
-            //{
-            //    GenderTB.Background = Brushes.Pink;
-            //    if (MessageBox.Show("Empty Field!\nPLease Enter the Employee name", "Error", MessageBoxButton.OK) == MessageBoxResult.OK)
-            //    {
-            //        GenderTB.Background = (SolidColorBrush)(new BrushConverter().ConvertFrom("#DADADA"));
-            //    }
-            //}
+            else if (MaleRB.IsChecked == false && FemaleRB.IsChecked == false)
+            {
+                MaleLbl.Background = Brushes.Pink;
+                FemaleLbl.Background = Brushes.Pink;
+                if(MessageBox.Show("Empty Field\nPlease Enter employee gender", "Error", MessageBoxButton.OK) == MessageBoxResult.OK)
+                {
+                    MaleLbl.Background = Brushes.Transparent;
+                    FemaleLbl.Background = Brushes.Transparent;
+                }
+            }
             else if (BirthTB.Text.Trim().Equals(""))
             {
                 BirthTB.Background = Brushes.Pink;
