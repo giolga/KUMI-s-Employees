@@ -62,11 +62,19 @@ namespace KUMIEmployees.UserControls
                     SurenameTB.Background = (SolidColorBrush)(new BrushConverter().ConvertFrom("#DADADA"));
                 }
             }
+            else if (PersonalIDTB.Text.Trim().Equals(""))
+            {
+                PersonalIDTB.Background = Brushes.Pink;
+                if (MessageBox.Show("Empty Field!\nPLease Enter the Employee personal ID", "Error", MessageBoxButton.OK) == MessageBoxResult.OK)
+                {
+                    PersonalIDTB.Background = (SolidColorBrush)(new BrushConverter().ConvertFrom("#DADADA"));
+                }
+            }
             else if (MaleRB.IsChecked == false && FemaleRB.IsChecked == false)
             {
                 MaleLbl.Background = Brushes.Pink;
                 FemaleLbl.Background = Brushes.Pink;
-                if(MessageBox.Show("Empty Field\nPlease Enter employee gender", "Error", MessageBoxButton.OK) == MessageBoxResult.OK)
+                if (MessageBox.Show("Empty Field\nPlease Enter employee gender", "Error", MessageBoxButton.OK) == MessageBoxResult.OK)
                 {
                     MaleLbl.Background = Brushes.Transparent;
                     FemaleLbl.Background = Brushes.Transparent;
@@ -103,7 +111,16 @@ namespace KUMIEmployees.UserControls
                 {
                     DegreeTB.Background = (SolidColorBrush)(new BrushConverter().ConvertFrom("#DADADA"));
                 }
-            } else
+            }
+            else if (AddressTB.Text.Trim().Equals(""))
+            {
+                AddressTB.Background = Brushes.Pink;
+                if (MessageBox.Show("Empty Field!\nPLease Enter the Employee address", "Error", MessageBoxButton.OK) == MessageBoxResult.OK)
+                {
+                    AddressTB.Background = (SolidColorBrush)(new BrushConverter().ConvertFrom("#DADADA"));
+                }
+            }
+            else
             {
                 MessageBox.Show("Everything is OK, Ready To Add Employee :)");
             }
@@ -145,5 +162,7 @@ namespace KUMIEmployees.UserControls
             FemaleImg.Opacity = 0.5;
             FemaleLbl.FontWeight = FontWeights.Normal;
         }
+
+
     }
 }

@@ -104,25 +104,27 @@
                     </Grid.ColumnDefinitions>
 
                     <StackPanel Orientation="Vertical" Grid.Column="0" >
-                        <Label Content="Name" Margin="10, 5, 0,  0" Height="35"/>
-                        <Label Content="Surename" Margin="10, 5, 0,  0" Height="35" />
-                        <Label Content="Gender" Margin="10, 5, 0,  0" Height="35"/>
-                        <Label Content="Date of birth" Margin="10, 5, 0,  0" Height="35"/>
-                        <Label Content="Job position" Margin="10, 5, 0,  0" Height="35"/>
-                        <Label Content="Mobile" Margin="10, 5, 0,  0" Height="35"/>
-                        <Label Content="University degree" Margin="10, 5, 0,  0" Height="35"/>
+                        <Label Content="Name" Margin="10, 5, 0,  0" Height="25"/>
+                        <Label Content="Surename" Margin="10, 5, 0,  0" Height="25" />
+                        <Label Content="Personal ID" Margin="10, 5, 0,  0" Height="25" />
+                        <Label Content="Gender" Margin="10, 5, 0,  0" Height="25"/>
+                        <Label Content="Date of birth" Margin="10, 5, 0,  0" Height="25"/>
+                        <Label Content="Job position" Margin="10, 5, 0,  0" Height="25"/>
+                        <Label Content="Mobile" Margin="10, 5, 0,  0" Height="25"/>
+                        <Label Content="University degree" Margin="10, 5, 0,  0" Height="25"/>
+                        <Label Content="Address" Margin="10, 5, 0,  0" Height="25"/>
                     </StackPanel>
 
                     <StackPanel Orientation="Vertical" Grid.Column="1">
                         <Grid Width="220" Height="350">
                             <Grid.RowDefinitions>
                                 <RowDefinition Height="*"/>
-                                <RowDefinition Height="60"/>
+                                <RowDefinition Height="30"/>
                             </Grid.RowDefinitions>
 
                             <StackPanel Grid.Row="0" Orientation="Vertical">
 
-                                <TextBox Margin="10, 5, 0, 0" Height="35" Name="NameTB" Background="#DADADA">
+                                <TextBox Margin="10, 5, 0, 0" Height="25" Name="NameTB" Background="#DADADA" Width="170" HorizontalAlignment="Left" TextWrapping="Wrap">
                                     <TextBox.BorderBrush>
                                         <SolidColorBrush Color="Black" />
                                     </TextBox.BorderBrush>
@@ -135,7 +137,7 @@
                                     </TextBox.Template>
                                 </TextBox>
 
-                                <TextBox Margin="10, 5, 0,  0" Height="35" Name="SurenameTB"  Background="#DADADA">
+                                <TextBox Margin="10, 5, 0,  0" Height="25" Name="SurenameTB"  Background="#DADADA" Width="170" HorizontalAlignment="Left" TextWrapping="Wrap">
                                     <TextBox.BorderBrush>
                                         <SolidColorBrush Color="Black" />
                                     </TextBox.BorderBrush>
@@ -148,13 +150,26 @@
                                     </TextBox.Template>
                                 </TextBox>
 
-                            
+                                <TextBox Margin="10, 5, 0, 0" Height="25" Name="PersonalIDTB" Background="#DADADA" Width="170" HorizontalAlignment="Left" TextWrapping="Wrap">
+                                    <TextBox.BorderBrush>
+                                        <SolidColorBrush Color="Black" />
+                                    </TextBox.BorderBrush>
+                                    <TextBox.Template>
+                                        <ControlTemplate TargetType="TextBox">
+                                            <Border CornerRadius="5" Background="{TemplateBinding Background}">
+                                                <ScrollViewer x:Name="PART_ContentHost" />
+                                            </Border>
+                                        </ControlTemplate>
+                                    </TextBox.Template>
+                                </TextBox>
+
+
 
                                 <StackPanel Orientation="Horizontal" Margin="10, 0, 0, 0">
-                                    <RadioButton Name="MaleRB" GroupName="Gender" Style="{StaticResource CustomRadioButtonStyle}" Checked="MaleRB_Checked" Unchecked="MaleRB_Unchecked">
+                                    <RadioButton Name="MaleRB" GroupName="Gender" Style="{StaticResource CustomRadioButtonStyle}" Checked="MaleRB_Checked" Unchecked="MaleRB_Unchecked" >
                                         <StackPanel Orientation="Horizontal">
                                             <Image Source="/Images/Gender/male.png" Width="20" Height="20" Margin="5" Name="MaleImg" Opacity="0.5"/>
-                                            <Label VerticalAlignment="Center" FontSize="16" Content="Male" Name="MaleLbl"/> 
+                                            <Label VerticalAlignment="Center" FontSize="16" Content="Male" Name="MaleLbl"/>
                                         </StackPanel>
                                     </RadioButton>
 
@@ -178,80 +193,93 @@
                                     </TextBox.Template>
                                 </TextBox>-->
 
-                                    <TextBox Margin="10, 5, 0,  0" Height="35" Name="BirthTB"  Background="#DADADA">
-                                        <TextBox.BorderBrush>
-                                            <SolidColorBrush Color="Black" />
-                                        </TextBox.BorderBrush>
-                                        <TextBox.Template>
-                                            <ControlTemplate TargetType="TextBox">
-                                                <Border CornerRadius="5" Background="{TemplateBinding Background}">
-                                                    <ScrollViewer x:Name="PART_ContentHost" />
-                                                </Border>
-                                            </ControlTemplate>
-                                        </TextBox.Template>
-                                    </TextBox>
+                                <TextBox Margin="10, 5, 0,  0" Height="25" Name="BirthTB"  Background="#DADADA" Width="170" HorizontalAlignment="Left" TextWrapping="Wrap">
+                                    <TextBox.BorderBrush>
+                                        <SolidColorBrush Color="Black" />
+                                    </TextBox.BorderBrush>
+                                    <TextBox.Template>
+                                        <ControlTemplate TargetType="TextBox">
+                                            <Border CornerRadius="5" Background="{TemplateBinding Background}">
+                                                <ScrollViewer x:Name="PART_ContentHost" />
+                                            </Border>
+                                        </ControlTemplate>
+                                    </TextBox.Template>
+                                </TextBox>
 
-                                    <TextBox Margin="10, 5, 0,  0" Height="35" Name="JobPositionTB"  Background="#DADADA">
-                                        <TextBox.BorderBrush>
-                                            <SolidColorBrush Color="Black" />
-                                        </TextBox.BorderBrush>
-                                        <TextBox.Template>
-                                            <ControlTemplate TargetType="TextBox">
-                                                <Border CornerRadius="5" Background="{TemplateBinding Background}">
-                                                    <ScrollViewer x:Name="PART_ContentHost" />
-                                                </Border>
-                                            </ControlTemplate>
-                                        </TextBox.Template>
-                                    </TextBox>
+                                <TextBox Margin="10, 5, 0,  0" Height="25" Name="JobPositionTB"  Background="#DADADA" Width="170" HorizontalAlignment="Left" TextWrapping="Wrap">
+                                    <TextBox.BorderBrush>
+                                        <SolidColorBrush Color="Black" />
+                                    </TextBox.BorderBrush>
+                                    <TextBox.Template>
+                                        <ControlTemplate TargetType="TextBox">
+                                            <Border CornerRadius="5" Background="{TemplateBinding Background}">
+                                                <ScrollViewer x:Name="PART_ContentHost" />
+                                            </Border>
+                                        </ControlTemplate>
+                                    </TextBox.Template>
+                                </TextBox>
 
-                                    <TextBox Margin="10, 5, 0,  0" Height="35" Name="MobileTB"  Background="#DADADA">
-                                        <TextBox.BorderBrush>
-                                            <SolidColorBrush Color="Black" />
-                                        </TextBox.BorderBrush>
-                                        <TextBox.Template>
-                                            <ControlTemplate TargetType="TextBox">
-                                                <Border CornerRadius="5" Background="{TemplateBinding Background}">
-                                                    <ScrollViewer x:Name="PART_ContentHost" />
-                                                </Border>
-                                            </ControlTemplate>
-                                        </TextBox.Template>
-                                    </TextBox>
+                                <TextBox Margin="10, 5, 0,  0" Height="25" Name="MobileTB"  Background="#DADADA" Width="170" HorizontalAlignment="Left" TextWrapping="Wrap">
+                                    <TextBox.BorderBrush>
+                                        <SolidColorBrush Color="Black" />
+                                    </TextBox.BorderBrush>
+                                    <TextBox.Template>
+                                        <ControlTemplate TargetType="TextBox">
+                                            <Border CornerRadius="5" Background="{TemplateBinding Background}">
+                                                <ScrollViewer x:Name="PART_ContentHost" />
+                                            </Border>
+                                        </ControlTemplate>
+                                    </TextBox.Template>
+                                </TextBox>
 
-                                    <TextBox Margin="10, 5, 0,  0" Height="35" Name="DegreeTB"  Background="#DADADA">
-                                        <TextBox.BorderBrush>
-                                            <SolidColorBrush Color="Black" />
-                                        </TextBox.BorderBrush>
-                                        <TextBox.Template>
-                                            <ControlTemplate TargetType="TextBox">
-                                                <Border CornerRadius="5" Background="{TemplateBinding Background}">
-                                                    <ScrollViewer x:Name="PART_ContentHost" />
-                                                </Border>
-                                            </ControlTemplate>
-                                        </TextBox.Template>
-                                    </TextBox>
+                                <TextBox Margin="10, 5, 0,  0" Height="25" Name="DegreeTB"  Background="#DADADA" Width="170" HorizontalAlignment="Left" TextWrapping="Wrap">
+                                    <TextBox.BorderBrush>
+                                        <SolidColorBrush Color="Black" />
+                                    </TextBox.BorderBrush>
+                                    <TextBox.Template>
+                                        <ControlTemplate TargetType="TextBox">
+                                            <Border CornerRadius="5" Background="{TemplateBinding Background}">
+                                                <ScrollViewer x:Name="PART_ContentHost" />
+                                            </Border>
+                                        </ControlTemplate>
+                                    </TextBox.Template>
+                                </TextBox>
 
-                                </StackPanel>
+                                <TextBox Margin="10, 5, 0,  0" Height="25" Name="AddressTB"  Background="#DADADA" Width="170" HorizontalAlignment="Left" TextWrapping="Wrap">
+                                    <TextBox.BorderBrush>
+                                        <SolidColorBrush Color="Black" />
+                                    </TextBox.BorderBrush>
+                                    <TextBox.Template>
+                                        <ControlTemplate TargetType="TextBox">
+                                            <Border CornerRadius="5" Background="{TemplateBinding Background}">
+                                                <ScrollViewer x:Name="PART_ContentHost" />
+                                            </Border>
+                                        </ControlTemplate>
+                                    </TextBox.Template>
+                                </TextBox>
 
-                                <Grid Grid.Row="1">
-                                    <Button Height="30" Width="50" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="0, 0, 1, 0" Name="SaveBtn" Click="SaveBtn_Click" >
-                                        <Button.Content>
-                                            Save
-                                        </Button.Content>
-                                        <Button.Style>
-                                            <Style  TargetType="{x:Type Button}">
-                                                <Setter Property="Foreground" Value="White" />
-                                                <Setter Property="FontWeight" Value="SemiBold"/>
-                                            </Style>
-                                        </Button.Style>
-                                        <Button.Template>
-                                            <ControlTemplate TargetType="Button">
-                                                <Border CornerRadius="2" BorderThickness="1" BorderBrush="#62D0AC" Background="#51DEB0">
-                                                    <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
-                                                </Border>
-                                            </ControlTemplate>
-                                        </Button.Template>
-                                    </Button>
-                                </Grid>
+                            </StackPanel>
+
+                            <Grid Grid.Row="1">
+                                <Button Height="30" Width="50" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="0, 0, 40, 0" Name="SaveBtn" Click="SaveBtn_Click" >
+                                    <Button.Content>
+                                        Save
+                                    </Button.Content>
+                                    <Button.Style>
+                                        <Style  TargetType="{x:Type Button}">
+                                            <Setter Property="Foreground" Value="White" />
+                                            <Setter Property="FontWeight" Value="SemiBold"/>
+                                        </Style>
+                                    </Button.Style>
+                                    <Button.Template>
+                                        <ControlTemplate TargetType="Button">
+                                            <Border CornerRadius="2" BorderThickness="1" BorderBrush="#62D0AC" Background="#51DEB0">
+                                                <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
+                                            </Border>
+                                        </ControlTemplate>
+                                    </Button.Template>
+                                </Button>
+                            </Grid>
                         </Grid>
                     </StackPanel>
                 </Grid>

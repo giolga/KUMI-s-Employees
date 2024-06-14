@@ -6,6 +6,7 @@
              xmlns:local="clr-namespace:KUMIEmployees.UserControls"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800"
+             Background="Azure"
              Height="450"
              Width="800">
     <Grid>
@@ -19,6 +20,66 @@
                 <RowDefinition Height="170" />
                 <RowDefinition Height="*" />
             </Grid.RowDefinitions>
+
+            <Grid Grid.Row="0">
+                <Image Margin="0, 20, 0, 5" Stretch="Uniform" Height="100" Width="110" Visibility="Visible" Source="/Images/add-person.png" />
+            </Grid>
+
+            <Grid Grid.Row="1" Width="300">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="150"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <StackPanel Grid.Column="0" Orientation="Vertical">
+                    <Label Content="First Name" Name="NameLbl" FontWeight="SemiBold" Foreground="#333333" />
+                    <Border Margin="5, 0, 5, 0" Height="25" Background="#DADADA" CornerRadius="5">
+                        <TextBlock Name="NameTBl" />
+                    </Border>
+
+                    <Label Content="Phone Number" Name="MobileLbl" FontWeight="SemiBold" Foreground="#333333" />
+                    <Border Margin="5, 0, 5, 0" Height="25" Background="#DADADA" CornerRadius="5">
+                        <TextBlock Name="MobileTBl" />
+                    </Border>
+
+                    <Label Content="Gender" Name="GenderLbl" FontWeight="SemiBold" Foreground="#333333" />
+                    <Border Margin="5, 0, 5, 0" Height="25" Background="#DADADA" CornerRadius="5">
+                        <TextBlock Name="GenderTBl" />
+                    </Border>
+
+                    <Label Content="Birth Date" Name="BirthDateLbl" FontWeight="SemiBold" Foreground="#333333" />
+                    <Border Margin="5, 0, 5, 0" Height="25" Background="#DADADA" CornerRadius="5">
+                        <TextBlock Name="BirthDateTBl" />
+                    </Border>
+
+                    <Label Content="Personal Id" Name="PersonalIdLbl" FontWeight="SemiBold" Foreground="#333333" />
+                    <Border Margin="5, 0, 5, 0" Height="25" Background="#DADADA" CornerRadius="5">
+                        <TextBlock Name="PersonalIdTBl" />
+                    </Border>
+                </StackPanel>
+
+                <StackPanel Grid.Column="1" Orientation="Vertical">
+                    <Label Content="Last Name" Name="lastnameLbl" FontWeight="SemiBold" Foreground="#333333" />
+                    <Border Margin="5, 0, 5, 0" Height="25" Background="#DADADA" CornerRadius="5">
+                        <TextBlock Name="LastnameTBl" />
+                    </Border>
+
+                    <Label Content="Email" Name="EmailLbl" FontWeight="SemiBold" Foreground="#333333" />
+                    <Border Margin="5, 0, 5, 0" Height="25" Background="#DADADA" CornerRadius="5">
+                        <TextBlock Name="EmailTBl" />
+                    </Border>
+
+                    <Label Content="Address" Name="AddressLbl" FontWeight="SemiBold" Foreground="#333333" />
+                    <Border Margin="5, 0, 5, 0" Height="25" Background="#DADADA" CornerRadius="5">
+                        <TextBlock Name="AddressTBl" />
+                    </Border>
+
+                    <Label Content="Age" Name="AgeLbl" FontWeight="SemiBold" Foreground="#333333" />
+                    <Border Margin="5, 0, 5, 0" Height="25" Background="#DADADA" CornerRadius="5">
+                        <TextBlock Name="AgeTBl" />
+                    </Border>
+                </StackPanel>
+            </Grid>
         </Grid>
     </Grid>
 </UserControl>

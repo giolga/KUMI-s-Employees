@@ -7,20 +7,24 @@
       "RelativeMoniker": "D:0:0:{1DB2A61F-F0F2-4F0E-BE9F-9C5BC8E5AE05}|KUMIEmployees\\KUMIEmployees.csproj|solutionrelative:kumiemployees\\usercontrols\\getemployee.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1DB2A61F-F0F2-4F0E-BE9F-9C5BC8E5AE05}|KUMIEmployees\\KUMIEmployees.csproj|C:\\Users\\Mikey\\OneDrive\\Desktop\\C#\\KUMIEmployees\\kumiemployees\\usercontrols\\addemployee.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{1DB2A61F-F0F2-4F0E-BE9F-9C5BC8E5AE05}|KUMIEmployees\\KUMIEmployees.csproj|solutionrelative:kumiemployees\\usercontrols\\addemployee.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+      "AbsoluteMoniker": "D:0:0:{1DB2A61F-F0F2-4F0E-BE9F-9C5BC8E5AE05}|KUMIEmployees\\KUMIEmployees.csproj|c:\\users\\mikey\\onedrive\\desktop\\c#\\kumiemployees\\kumiemployees\\model\\employee.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1DB2A61F-F0F2-4F0E-BE9F-9C5BC8E5AE05}|KUMIEmployees\\KUMIEmployees.csproj|solutionrelative:kumiemployees\\model\\employee.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{1DB2A61F-F0F2-4F0E-BE9F-9C5BC8E5AE05}|KUMIEmployees\\KUMIEmployees.csproj|C:\\Users\\Mikey\\OneDrive\\Desktop\\C#\\KUMIEmployees\\kumiemployees\\usercontrols\\addemployee.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{1DB2A61F-F0F2-4F0E-BE9F-9C5BC8E5AE05}|KUMIEmployees\\KUMIEmployees.csproj|solutionrelative:kumiemployees\\usercontrols\\addemployee.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1DB2A61F-F0F2-4F0E-BE9F-9C5BC8E5AE05}|KUMIEmployees\\KUMIEmployees.csproj|C:\\Users\\Mikey\\OneDrive\\Desktop\\C#\\KUMIEmployees\\kumiemployees\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1DB2A61F-F0F2-4F0E-BE9F-9C5BC8E5AE05}|KUMIEmployees\\KUMIEmployees.csproj|solutionrelative:kumiemployees\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{1DB2A61F-F0F2-4F0E-BE9F-9C5BC8E5AE05}|KUMIEmployees\\KUMIEmployees.csproj|C:\\Users\\Mikey\\OneDrive\\Desktop\\C#\\KUMIEmployees\\kumiemployees\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{1DB2A61F-F0F2-4F0E-BE9F-9C5BC8E5AE05}|KUMIEmployees\\KUMIEmployees.csproj|solutionrelative:kumiemployees\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1DB2A61F-F0F2-4F0E-BE9F-9C5BC8E5AE05}|KUMIEmployees\\KUMIEmployees.csproj|c:\\users\\mikey\\onedrive\\desktop\\c#\\kumiemployees\\kumiemployees\\usercontrols\\addemployee.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{1DB2A61F-F0F2-4F0E-BE9F-9C5BC8E5AE05}|KUMIEmployees\\KUMIEmployees.csproj|solutionrelative:kumiemployees\\usercontrols\\addemployee.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1DB2A61F-F0F2-4F0E-BE9F-9C5BC8E5AE05}|KUMIEmployees\\KUMIEmployees.csproj|C:\\Users\\Mikey\\OneDrive\\Desktop\\C#\\KUMIEmployees\\kumiemployees\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1DB2A61F-F0F2-4F0E-BE9F-9C5BC8E5AE05}|KUMIEmployees\\KUMIEmployees.csproj|solutionrelative:kumiemployees\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -30,8 +34,33 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 2,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "AddEmployee.xaml",
+              "DocumentMoniker": "C:\\Users\\Mikey\\OneDrive\\Desktop\\C#\\KUMIEmployees\\KUMIEmployees\\UserControls\\AddEmployee.xaml",
+              "RelativeDocumentMoniker": "KUMIEmployees\\UserControls\\AddEmployee.xaml",
+              "ToolTip": "C:\\Users\\Mikey\\OneDrive\\Desktop\\C#\\KUMIEmployees\\KUMIEmployees\\UserControls\\AddEmployee.xaml",
+              "RelativeToolTip": "KUMIEmployees\\UserControls\\AddEmployee.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-06-14T20:18:50.134Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Employee.cs",
+              "DocumentMoniker": "C:\\Users\\Mikey\\OneDrive\\Desktop\\C#\\KUMIEmployees\\KUMIEmployees\\Model\\Employee.cs",
+              "RelativeDocumentMoniker": "KUMIEmployees\\Model\\Employee.cs",
+              "ToolTip": "C:\\Users\\Mikey\\OneDrive\\Desktop\\C#\\KUMIEmployees\\KUMIEmployees\\Model\\Employee.cs",
+              "RelativeToolTip": "KUMIEmployees\\Model\\Employee.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAACYAAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-14T20:15:11.03Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
@@ -46,7 +75,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 5,
               "Title": "MainWindow.xaml.cs",
               "DocumentMoniker": "C:\\Users\\Mikey\\OneDrive\\Desktop\\C#\\KUMIEmployees\\KUMIEmployees\\MainWindow.xaml.cs",
               "RelativeDocumentMoniker": "KUMIEmployees\\MainWindow.xaml.cs",
@@ -65,33 +94,22 @@
               "RelativeDocumentMoniker": "KUMIEmployees\\UserControls\\AddEmployee.xaml.cs",
               "ToolTip": "C:\\Users\\Mikey\\OneDrive\\Desktop\\C#\\KUMIEmployees\\KUMIEmployees\\UserControls\\AddEmployee.xaml.cs",
               "RelativeToolTip": "KUMIEmployees\\UserControls\\AddEmployee.xaml.cs",
-              "ViewState": "AQIAABgAAAAAAAAAAADwvyQAAAAAAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAACgAAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-06-12T19:31:54.94Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "AddEmployee.xaml",
-              "DocumentMoniker": "C:\\Users\\Mikey\\OneDrive\\Desktop\\C#\\KUMIEmployees\\KUMIEmployees\\UserControls\\AddEmployee.xaml",
-              "RelativeDocumentMoniker": "KUMIEmployees\\UserControls\\AddEmployee.xaml",
-              "ToolTip": "C:\\Users\\Mikey\\OneDrive\\Desktop\\C#\\KUMIEmployees\\KUMIEmployees\\UserControls\\AddEmployee.xaml",
-              "RelativeToolTip": "KUMIEmployees\\UserControls\\AddEmployee.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-06-11T13:36:31.19Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 3,
               "Title": "MainWindow.xaml",
               "DocumentMoniker": "C:\\Users\\Mikey\\OneDrive\\Desktop\\C#\\KUMIEmployees\\KUMIEmployees\\MainWindow.xaml",
               "RelativeDocumentMoniker": "KUMIEmployees\\MainWindow.xaml",
               "ToolTip": "C:\\Users\\Mikey\\OneDrive\\Desktop\\C#\\KUMIEmployees\\KUMIEmployees\\MainWindow.xaml",
               "RelativeToolTip": "KUMIEmployees\\MainWindow.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-06-11T13:34:44.161Z"
+              "WhenOpened": "2024-06-11T13:34:44.161Z",
+              "EditorCaption": ""
             }
           ]
         }
