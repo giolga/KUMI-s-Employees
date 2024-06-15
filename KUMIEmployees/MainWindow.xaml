@@ -36,7 +36,8 @@
             </TabItem>
 
             <TabItem Header="Get Employee">
-                <Label Content="GET"/>
+                <!--<Label Content="GET"/>-->
+                <uc:GetEmployee></uc:GetEmployee>
             </TabItem>
 
             <TabItem Header="Delete Employee">
