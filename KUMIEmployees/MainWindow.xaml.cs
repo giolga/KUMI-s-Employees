@@ -27,6 +27,7 @@ namespace KUMIEmployees
         public MainWindow()
         {
             InitializeComponent();
+
             //string nameTxtFile = "C:\\Users\\Mikey\\OneDrive\\Desktop\\KUMIEmployees\\KUMIEmployees\\names.txt";
             //string surenameTxtFile = "C:\\Users\\Mikey\\OneDrive\\Desktop\\KUMIEmployees\\KUMIEmployees\\surenames.txt";
 

@@ -5,9 +5,9 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:KUMIEmployees.UserControls"
              mc:Ignorable="d"
-             Height="450"
-             Width="800"
-             d:DesignHeight="450" d:DesignWidth="800">
+             Height="600"
+             Width="1000"
+             d:DesignHeight="600" d:DesignWidth="1000">
     <UserControl.Resources>
         <!-- Custom RadioButton Style -->
         <Style x:Key="CustomRadioButtonStyle" TargetType="RadioButton">
@@ -29,20 +29,20 @@
         </Grid.ColumnDefinitions>
 
         <Grid Grid.Column="0" Background="#FFD233">
-            <Grid Height="450">
+            <Grid Height="600">
                 <Grid.RowDefinitions>
-                    <RowDefinition Height="230"/>
-                    <RowDefinition Height="50"/>
-                    <RowDefinition Height="50"/>
+                    <RowDefinition Height="322"/>
+                    <RowDefinition Height="70"/>
+                    <RowDefinition Height="70"/>
                     <RowDefinition Height="*"/>
                 </Grid.RowDefinitions>
 
                 <StackPanel Grid.Row="0" Orientation="Vertical">
-                    <Image  x:Name="AddPersonImg"  Margin="0, 50, 0, 5" Stretch="Uniform" Height="120" Width="130" Visibility="Visible" Source="/Images/add-person.png" />
+                    <Image  x:Name="AddPersonImg"  Margin="0, 50, 0, 5" Stretch="Uniform" Height="170" Width="165" Visibility="Visible" Source="/Images/add-person.png" />
                     <Grid HorizontalAlignment="Center">
                         <StackPanel Orientation="Horizontal">
 
-                            <Label Content="Add Profile Photo" FontSize="10" FontWeight="Medium" Foreground="#333333"/>
+                            <Label Content="Add Profile Photo" FontSize="14" FontWeight="Medium" Foreground="#333333"/>
                             <Button Name="EmployeePhotoBtn" Click="EmployeePhotoBtn_Click">
                                 <Button.Content>
                                     Add
@@ -51,7 +51,7 @@
                                     <Style  TargetType="{x:Type Button}">
                                         <Setter Property="Foreground" Value="#FFD233" />
                                         <Setter Property="FontWeight" Value="SemiBold"/>
-                                        <Setter Property="Width" Value="35" />
+                                        <Setter Property="Width" Value="44" />
                                         <Setter Property="HorizontalAlignment" Value="Center" />
                                     </Style>
                                 </Button.Style>
@@ -68,21 +68,21 @@
                 </StackPanel>
 
 
-                <Label Grid.Row="1" Content="Let's get you set up!" FontSize="22" FontWeight="SemiBold" HorizontalAlignment="Center" Foreground="#333333"/>
+                <Label Grid.Row="1" Content="Let's get you set up!" FontSize="30" FontWeight="SemiBold" HorizontalAlignment="Center" Foreground="#333333"/>
                 <TextBlock Grid.Row="2" Text="It should only take a couple of minutes to become a member of KUMI company" TextWrapping="Wrap"
-                   HorizontalAlignment="Center" VerticalAlignment="Center" Width="260" TextAlignment="Center" FontWeight="Medium" Foreground="#4D4B4B" />
+                   HorizontalAlignment="Center" VerticalAlignment="Center" Width="325" TextAlignment="Center" FontWeight="Medium" Foreground="#4D4B4B" />
 
-                <Button Grid.Row="3" Width="50" Height="50" Background="#2F2F2F" FontSize="40" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"
+                <Button Grid.Row="3" Width="70" Height="70" Background="#2F2F2F" FontSize="40" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"
                 Foreground="#FFD233" Margin="0, 0, 0, 20" Name="DistractedBtn" Click="DistractedBtn_Click" >
                     <Button.Style>
                         <Style TargetType="Button">
                             <Setter Property="Template">
                                 <Setter.Value>
                                     <ControlTemplate TargetType="{x:Type Button}">
-                                        <Border CornerRadius="25" Background="{TemplateBinding Background}">
+                                        <Border CornerRadius="35" Background="{TemplateBinding Background}">
                                             <!--<ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>-->
                                             <Viewbox HorizontalAlignment="Center" VerticalAlignment="Center">
-                                                <TextBlock Text="&gt;" FontSize="50" Width="31" Height="79" />
+                                                <TextBlock Text="&gt;" FontSize="70" Width="39" Height="110" />
                                             </Viewbox>
                                         </Border>
                                     </ControlTemplate>
@@ -96,35 +96,35 @@
         </Grid>
 
         <Grid Grid.Column="1" Background="#F8F1E6">
-            <Grid Height="350" Width="400" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <Grid Height="490" Width="500" HorizontalAlignment="Center" VerticalAlignment="Center">
                 <Grid Width="350">
                     <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="130"/>
+                        <ColumnDefinition Width="140"/>
                         <ColumnDefinition Width="*"/>
                     </Grid.ColumnDefinitions>
 
-                    <StackPanel Orientation="Vertical" Grid.Column="0" >
-                        <Label Content="Name" Margin="10, 5, 0,  0" Height="25"/>
-                        <Label Content="Surename" Margin="10, 5, 0,  0" Height="25" />
-                        <Label Content="Personal ID" Margin="10, 5, 0,  0" Height="25" />
-                        <Label Content="Gender" Margin="10, 5, 0,  0" Height="25"/>
-                        <Label Content="Date of birth" Margin="10, 5, 0,  0" Height="25"/>
-                        <Label Content="Job position" Margin="10, 5, 0,  0" Height="25"/>
-                        <Label Content="Mobile" Margin="10, 5, 0,  0" Height="25"/>
-                        <Label Content="University degree" Margin="10, 5, 0,  0" Height="25"/>
-                        <Label Content="Address" Margin="10, 5, 0,  0" Height="25"/>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="360" />
+                        <RowDefinition Height="*" />
+                    </Grid.RowDefinitions>
+
+                    <StackPanel Orientation="Vertical" Grid.Column="0" Grid.Row="0" Height="350" VerticalAlignment="Top">
+                        <Label Content="Name" Margin="0, 5, 0,  0" Height="35" FontSize="15" FontWeight="Medium"/>
+                        <Label Content="Surename" Margin="0, 5, 0,  0" Height="35" FontSize="15" FontWeight="Medium"/>
+                        <Label Content="Personal ID" Margin="0, 5, 0,  0" Height="35" FontSize="15" FontWeight="Medium"/>
+                        <Label Content="Gender" Margin="0, 5, 0,  0" Height="35" FontSize="15" FontWeight="Medium"/>
+                        <Label Content="Date of birth" Margin="0, 5, 0,  0" Height="35" FontSize="15" FontWeight="Medium"/>
+                        <Label Content="Job position" Margin="0, 5, 0,  0" Height="35" FontSize="15" FontWeight="Medium"/>
+                        <Label Content="Mobile" Margin="0, 5, 0,  0" Height="35" FontSize="15" FontWeight="Medium"/>
+                        <Label Content="University degree" Margin="0, 5, 0,  0" Height="35" FontSize="15" FontWeight="Medium"/>
+                        <Label Content="Address" Margin="0, 5, 0,  0" Height="35" FontSize="15" FontWeight="Medium"/>
                     </StackPanel>
 
-                    <StackPanel Orientation="Vertical" Grid.Column="1">
-                        <Grid Width="220" Height="350">
-                            <Grid.RowDefinitions>
-                                <RowDefinition Height="*"/>
-                                <RowDefinition Height="30"/>
-                            </Grid.RowDefinitions>
+                    <StackPanel Orientation="Vertical" Grid.Column="1"  VerticalAlignment="Top" Grid.Row="0">
+                        <Grid Width="275" Height="360">
+                            <StackPanel  Orientation="Vertical">
 
-                            <StackPanel Grid.Row="0" Orientation="Vertical">
-
-                                <TextBox Margin="10, 5, 0, 0" Height="25" Name="NameTB" Background="#DADADA" Width="170" HorizontalAlignment="Left" TextWrapping="Wrap">
+                                <TextBox Margin="10, 5, 0, 0" Height="35" Name="NameTB" Background="#DADADA" Width="200" HorizontalAlignment="Left" TextWrapping="Wrap">
                                     <TextBox.BorderBrush>
                                         <SolidColorBrush Color="Black" />
                                     </TextBox.BorderBrush>
@@ -137,7 +137,7 @@
                                     </TextBox.Template>
                                 </TextBox>
 
-                                <TextBox Margin="10, 5, 0,  0" Height="25" Name="SurenameTB"  Background="#DADADA" Width="170" HorizontalAlignment="Left" TextWrapping="Wrap">
+                                <TextBox Margin="10, 5, 0,  0" Height="35" Name="SurenameTB"  Background="#DADADA" Width="200" HorizontalAlignment="Left" TextWrapping="Wrap">
                                     <TextBox.BorderBrush>
                                         <SolidColorBrush Color="Black" />
                                     </TextBox.BorderBrush>
@@ -150,7 +150,7 @@
                                     </TextBox.Template>
                                 </TextBox>
 
-                                <TextBox Margin="10, 5, 0, 0" Height="25" Name="PersonalIDTB" Background="#DADADA" Width="170" HorizontalAlignment="Left" TextWrapping="Wrap">
+                                <TextBox Margin="10, 5, 0, 0" Height="35" Name="PersonalIDTB" Background="#DADADA" Width="200" HorizontalAlignment="Left" TextWrapping="Wrap">
                                     <TextBox.BorderBrush>
                                         <SolidColorBrush Color="Black" />
                                     </TextBox.BorderBrush>
@@ -168,15 +168,15 @@
                                 <StackPanel Orientation="Horizontal" Margin="10, 0, 0, 0">
                                     <RadioButton Name="MaleRB" GroupName="Gender" Style="{StaticResource CustomRadioButtonStyle}" Checked="MaleRB_Checked" Unchecked="MaleRB_Unchecked" >
                                         <StackPanel Orientation="Horizontal">
-                                            <Image Source="/Images/Gender/male.png" Width="20" Height="20" Margin="5" Name="MaleImg" Opacity="0.5"/>
-                                            <Label VerticalAlignment="Center" FontSize="16" Content="Male" Name="MaleLbl"/>
+                                            <Image Source="/Images/Gender/male.png" Width="28" Height="25" Margin="5" Name="MaleImg" Opacity="0.5"/>
+                                            <Label VerticalAlignment="Center" FontSize="20" Content="Male" Name="MaleLbl"/>
                                         </StackPanel>
                                     </RadioButton>
 
                                     <RadioButton Name="FemaleRB" GroupName="Gender" Style="{StaticResource CustomRadioButtonStyle}" Checked="FemaleRB_Checked" Unchecked="FemaleRB_Unchecked">
                                         <StackPanel Orientation="Horizontal">
-                                            <Image Source="/Images/Gender/female.png" Width="20" Height="20" Margin="5" Name="FemaleImg" Opacity="0.5"/>
-                                            <Label VerticalAlignment="Center" FontSize="16" Content="Female" Name="FemaleLbl"/>
+                                            <Image Source="/Images/Gender/female.png" Width="28" Height="25" Margin="5" Name="FemaleImg" Opacity="0.5"/>
+                                            <Label VerticalAlignment="Center" FontSize="20" Content="Female" Name="FemaleLbl"/>
                                         </StackPanel>
                                     </RadioButton>
                                 </StackPanel>
@@ -193,7 +193,7 @@
                                     </TextBox.Template>
                                 </TextBox>-->
 
-                                <TextBox Margin="10, 5, 0,  0" Height="25" Name="BirthTB"  Background="#DADADA" Width="170" HorizontalAlignment="Left" TextWrapping="Wrap">
+                                <TextBox Margin="10, 5, 0,  0" Height="35" Name="BirthTB"  Background="#DADADA" Width="200" HorizontalAlignment="Left" TextWrapping="Wrap">
                                     <TextBox.BorderBrush>
                                         <SolidColorBrush Color="Black" />
                                     </TextBox.BorderBrush>
@@ -206,7 +206,7 @@
                                     </TextBox.Template>
                                 </TextBox>
 
-                                <TextBox Margin="10, 5, 0,  0" Height="25" Name="JobPositionTB"  Background="#DADADA" Width="170" HorizontalAlignment="Left" TextWrapping="Wrap">
+                                <TextBox Margin="10, 5, 0,  0" Height="35" Name="JobPositionTB"  Background="#DADADA" Width="200" HorizontalAlignment="Left" TextWrapping="Wrap">
                                     <TextBox.BorderBrush>
                                         <SolidColorBrush Color="Black" />
                                     </TextBox.BorderBrush>
@@ -219,7 +219,7 @@
                                     </TextBox.Template>
                                 </TextBox>
 
-                                <TextBox Margin="10, 5, 0,  0" Height="25" Name="MobileTB"  Background="#DADADA" Width="170" HorizontalAlignment="Left" TextWrapping="Wrap">
+                                <TextBox Margin="10, 5, 0,  0" Height="35" Name="MobileTB"  Background="#DADADA" Width="200" HorizontalAlignment="Left" TextWrapping="Wrap">
                                     <TextBox.BorderBrush>
                                         <SolidColorBrush Color="Black" />
                                     </TextBox.BorderBrush>
@@ -232,7 +232,7 @@
                                     </TextBox.Template>
                                 </TextBox>
 
-                                <TextBox Margin="10, 5, 0,  0" Height="25" Name="DegreeTB"  Background="#DADADA" Width="170" HorizontalAlignment="Left" TextWrapping="Wrap">
+                                <TextBox Margin="10, 5, 0,  0" Height="35" Name="DegreeTB"  Background="#DADADA" Width="200" HorizontalAlignment="Left" TextWrapping="Wrap">
                                     <TextBox.BorderBrush>
                                         <SolidColorBrush Color="Black" />
                                     </TextBox.BorderBrush>
@@ -245,7 +245,7 @@
                                     </TextBox.Template>
                                 </TextBox>
 
-                                <TextBox Margin="10, 5, 0,  0" Height="25" Name="AddressTB"  Background="#DADADA" Width="170" HorizontalAlignment="Left" TextWrapping="Wrap">
+                                <TextBox Margin="10, 5, 0,  0" Height="35" Name="AddressTB"  Background="#DADADA" Width="200" HorizontalAlignment="Left" TextWrapping="Wrap">
                                     <TextBox.BorderBrush>
                                         <SolidColorBrush Color="Black" />
                                     </TextBox.BorderBrush>
@@ -257,31 +257,46 @@
                                         </ControlTemplate>
                                     </TextBox.Template>
                                 </TextBox>
+
 
                             </StackPanel>
 
-                            <Grid Grid.Row="1">
-                                <Button Height="30" Width="50" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="0, 0, 40, 0" Name="SaveBtn" Click="SaveBtn_Click" >
-                                    <Button.Content>
-                                        Save
-                                    </Button.Content>
-                                    <Button.Style>
-                                        <Style  TargetType="{x:Type Button}">
-                                            <Setter Property="Foreground" Value="White" />
-                                            <Setter Property="FontWeight" Value="SemiBold"/>
-                                        </Style>
-                                    </Button.Style>
-                                    <Button.Template>
-                                        <ControlTemplate TargetType="Button">
-                                            <Border CornerRadius="2" BorderThickness="1" BorderBrush="#62D0AC" Background="#51DEB0">
-                                                <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
-                                            </Border>
-                                        </ControlTemplate>
-                                    </Button.Template>
-                                </Button>
-                            </Grid>
                         </Grid>
                     </StackPanel>
+
+                    <Grid Grid.Row="1" Grid.ColumnSpan="2">
+                        <TextBox Margin="0,10,0,47" Name="BiographyTb"  Background="#DADADA" Width="346" HorizontalAlignment="Center" TextWrapping="Wrap" AcceptsReturn="True" SpellCheck.IsEnabled="True" Language="en-US" Text="Tell us about yourself" Foreground="#333" FontSize="14">
+                            <TextBox.BorderBrush>
+                                <SolidColorBrush Color="Black" />
+                            </TextBox.BorderBrush>
+                            <TextBox.Template>
+                                <ControlTemplate TargetType="TextBox">
+                                    <Border CornerRadius="5" Background="{TemplateBinding Background}">
+                                        <ScrollViewer x:Name="PART_ContentHost" />
+                                    </Border>
+                                </ControlTemplate>
+                            </TextBox.Template>
+                        </TextBox>
+
+                        <Button Height="42" Width="63" HorizontalAlignment="Right" VerticalAlignment="Bottom"  Name="SaveBtn" Click="SaveBtn_Click" FontSize="18" >
+                            <Button.Content>
+                                Save
+                            </Button.Content>
+                            <Button.Style>
+                                <Style  TargetType="{x:Type Button}">
+                                    <Setter Property="Foreground" Value="White" />
+                                    <Setter Property="FontWeight" Value="SemiBold"/>
+                                </Style>
+                            </Button.Style>
+                            <Button.Template>
+                                <ControlTemplate TargetType="Button">
+                                    <Border CornerRadius="2" BorderThickness="1" BorderBrush="#62D0AC" Background="#51DEB0">
+                                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
+                                    </Border>
+                                </ControlTemplate>
+                            </Button.Template>
+                        </Button>
+                    </Grid>
                 </Grid>
             </Grid>
         </Grid>
