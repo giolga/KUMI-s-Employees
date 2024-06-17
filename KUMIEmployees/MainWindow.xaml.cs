@@ -1,4 +1,5 @@
 ﻿using KUMIEmployees.Model;
+using KUMIEmployees.UserControls;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -24,12 +25,15 @@ namespace KUMIEmployees
     {
         private static string[] jobs = { "Network Administrator", "Pentester", "Software_Developer", "Software_Engineer", "Devops_Engineer", "Sys_Admin", "Manager", "Front_End_Developer", "Support", "Accountant", "Guard" };
         private Random random = new Random();
+
+        public static Employee emp = new Employee();
         public MainWindow()
         {
             InitializeComponent();
 
             //string nameTxtFile = "C:\\Users\\Mikey\\OneDrive\\Desktop\\KUMIEmployees\\KUMIEmployees\\names.txt";
             //string surenameTxtFile = "C:\\Users\\Mikey\\OneDrive\\Desktop\\KUMIEmployees\\KUMIEmployees\\surenames.txt";
+            addEmployeeUC.addNewEmployeeInMyCompany += AddEmp;
 
             string basePath = Environment.CurrentDirectory;
 
@@ -60,6 +64,10 @@ namespace KUMIEmployees
             }
 
             //ShowAllDG.Items.RemoveAt(40);
+        }
+
+        public void AddEmp(Employee myEmp) {
+            ShowAllDG.Items.Add(myEmp);
         }
     }
 }

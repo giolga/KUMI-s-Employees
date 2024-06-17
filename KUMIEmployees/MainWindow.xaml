@@ -31,7 +31,7 @@
 
             <TabItem Header="Add Employee">
                 <!--<Label Content="POST"/>-->
-                <uc:AddEmployee />
+                <uc:AddEmployee x:Name="addEmployeeUC"/>
 
             </TabItem>
 

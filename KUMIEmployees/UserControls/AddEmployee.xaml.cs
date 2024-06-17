@@ -23,7 +23,10 @@ namespace KUMIEmployees.UserControls
     /// </summary>
     public partial class AddEmployee : UserControl
     {
-        public static Employee AddNewEmployee;
+        public delegate void AddNewEmployeeInMyCompany(Employee employee);
+        public event AddNewEmployeeInMyCompany addNewEmployeeInMyCompany;
+
+        public static Employee addNewEmployee;
         public static string imageUrl;
         public AddEmployee()
         {
@@ -43,7 +46,7 @@ namespace KUMIEmployees.UserControls
         private void SaveBtn_Click(object sender, RoutedEventArgs e)
         {
             //MessageBox.Show("Saved!");
-            AddNewEmployee = new Employee();
+            addNewEmployee = new Employee();
 
 
             if (NameTB.Text.Trim().Equals(""))
@@ -123,7 +126,27 @@ namespace KUMIEmployees.UserControls
             else
             {
                 MessageBox.Show("Everything is OK, Ready To Add Employee :)");
+                addNewEmployee.Id = 155;
+                addNewEmployee.Name = NameTB.Text.ToString();
+                addNewEmployee.Surename = SurenameTB.Text.ToString();
+                addNewEmployee.PersonalId = PersonalIDTB.Text.ToString();
+                addNewEmployee.Email = $"{NameTB.Text[0].ToString().ToLower()}.{SurenameTB.Text.ToString().ToLower()}@gmail.com";
+                addNewEmployee.Gender = Gender.Male;
+                addNewEmployee.BirthDate = DateTime.Now;
+                addNewEmployee.JobPosition = JobPositionTB.Text.ToString();
+                addNewEmployee.Tel = MobileTB.Text.ToString();
+                addNewEmployee.Salary = 3500;
+                addNewEmployee.Bonus = 150;
+                addNewEmployee.ImageUrl = imageUrl;
+                addNewEmployee.Biography = BiographyTb.Text.ToString();
+
+                addNewEmployeeInMyCompany?.Invoke(addNewEmployee);
             }
+
+            //if (addNewEmployeeInMyCompany != null)
+            //{
+            //    addNewEmployeeInMyCompany(addNewEmployee);
+            //}
         }
 
         private void EmployeePhotoBtn_Click(object sender, RoutedEventArgs e)
