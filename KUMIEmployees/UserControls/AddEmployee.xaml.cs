@@ -73,6 +73,14 @@ namespace KUMIEmployees.UserControls
                     PersonalIDTB.Background = (SolidColorBrush)(new BrushConverter().ConvertFrom("#DADADA"));
                 }
             }
+            else if (PersonalIDTB.Text.Trim().Length != 11 || !PersonalIDTB.Text.Trim().ToString().All(char.IsDigit))
+            {
+                PersonalIDTB.Background = Brushes.Pink;
+                if (MessageBox.Show("Incorrect field!\nEmployee ID must contain 11 digits", "Error", MessageBoxButton.OK) == MessageBoxResult.OK)
+                {
+                    PersonalIDTB.Background = (SolidColorBrush)(new BrushConverter().ConvertFrom("#DADADA"));
+                }
+            }
             else if (MaleRB.IsChecked == false && FemaleRB.IsChecked == false)
             {
                 MaleLbl.Background = Brushes.Pink;
@@ -86,7 +94,15 @@ namespace KUMIEmployees.UserControls
             else if (BirthTB.Text.Trim().Equals(""))
             {
                 BirthTB.Background = Brushes.Pink;
-                if (MessageBox.Show("Empty Field!\nPLease Enter the Employee name", "Error", MessageBoxButton.OK) == MessageBoxResult.OK)
+                if (MessageBox.Show("Empty Field!\nPLease Enter the Employee birth date", "Error", MessageBoxButton.OK) == MessageBoxResult.OK)
+                {
+                    BirthTB.Background = (SolidColorBrush)(new BrushConverter().ConvertFrom("#DADADA"));
+                }
+            }
+            else if (!DateTime.TryParse(BirthTB.Text.ToString(), out DateTime empBirthDay)) //DateTime correctness
+            {
+                BirthTB.Background = Brushes.Pink;
+                if (MessageBox.Show("Incorrect field!\nPLease Enter the Employee birth date in correct format (yy/mm/dd)", "Error", MessageBoxButton.OK) == MessageBoxResult.OK)
                 {
                     BirthTB.Background = (SolidColorBrush)(new BrushConverter().ConvertFrom("#DADADA"));
                 }
@@ -132,7 +148,7 @@ namespace KUMIEmployees.UserControls
                 addNewEmployee.PersonalId = PersonalIDTB.Text.ToString();
                 addNewEmployee.Email = $"{NameTB.Text[0].ToString().ToLower()}.{SurenameTB.Text.ToString().ToLower()}@gmail.com";
                 addNewEmployee.Gender = Gender.Male;
-                addNewEmployee.BirthDate = DateTime.Now;
+                addNewEmployee.BirthDate = empBirthDay;
                 addNewEmployee.JobPosition = JobPositionTB.Text.ToString();
                 addNewEmployee.Tel = MobileTB.Text.ToString();
                 addNewEmployee.Salary = 3500;
@@ -141,12 +157,19 @@ namespace KUMIEmployees.UserControls
                 addNewEmployee.Biography = BiographyTb.Text.ToString();
 
                 addNewEmployeeInMyCompany?.Invoke(addNewEmployee);
+
+                MessageBox.Show($"Given person dateTime: {addNewEmployee.BirthDate}");
             }
 
             //if (addNewEmployeeInMyCompany != null)
             //{
             //    addNewEmployeeInMyCompany(addNewEmployee);
             //}
+        }
+
+        private void JobPosition_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
         }
 
         private void EmployeePhotoBtn_Click(object sender, RoutedEventArgs e)
@@ -185,7 +208,6 @@ namespace KUMIEmployees.UserControls
             FemaleImg.Opacity = 0.5;
             FemaleLbl.FontWeight = FontWeights.Normal;
         }
-
 
     }
 }
