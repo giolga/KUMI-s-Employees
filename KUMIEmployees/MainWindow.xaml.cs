@@ -59,7 +59,7 @@ namespace KUMIEmployees
 
             for (int i = 0; i < names.Length; i++)
             {
-                Employee emp = new Employee(i + 1, names[i], surenames[i], $"{names[i][0].ToString().ToLower()}.{surenames[i].ToString().ToLower()}@gmail.com", "Developer", "+995557443766", 2000, 150);
+                Employee emp = new Employee(i + 1, names[i], surenames[i], $"{names[i][0].ToString().ToLower()}.{surenames[i].ToString().ToLower()}@gmail.com", Jobs.Software_Engineer, "+995557443766", 2000, 150);
                 ShowAllDG.Items.Add(emp);
             }
 

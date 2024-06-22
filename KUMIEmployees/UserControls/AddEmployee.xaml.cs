@@ -149,7 +149,8 @@ namespace KUMIEmployees.UserControls
                 addNewEmployee.Email = $"{NameTB.Text[0].ToString().ToLower()}.{SurenameTB.Text.ToString().ToLower()}@gmail.com";
                 addNewEmployee.Gender = Gender.Male;
                 addNewEmployee.BirthDate = empBirthDay;
-                addNewEmployee.JobPosition = JobPositionTB.Text.ToString();
+                addNewEmployee.JobPosition = (Jobs)Enum.Parse(typeof(Jobs), JobPositionTB.Text.ToString().Replace(' ', '_'));
+                addNewEmployee.Degree = (UniversityDegree)Enum.Parse(typeof (UniversityDegree), DegreeTB.Text.ToString());
                 addNewEmployee.Tel = MobileTB.Text.ToString();
                 addNewEmployee.Salary = 3500;
                 addNewEmployee.Bonus = 150;
@@ -158,7 +159,9 @@ namespace KUMIEmployees.UserControls
 
                 addNewEmployeeInMyCompany?.Invoke(addNewEmployee);
 
-                MessageBox.Show($"Given person dateTime: {addNewEmployee.BirthDate}");
+                //MessageBox.Show($"Given person dateTime: {addNewEmployee.BirthDate}");
+                MessageBox.Show($"Given person Job Position: {addNewEmployee.JobPosition}");
+                MessageBox.Show($"Given person Uni Degree: {addNewEmployee.Degree}");
             }
 
             //if (addNewEmployeeInMyCompany != null)
@@ -167,10 +170,6 @@ namespace KUMIEmployees.UserControls
             //}
         }
 
-        private void JobPosition_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-
-        }
 
         private void EmployeePhotoBtn_Click(object sender, RoutedEventArgs e)
         {
@@ -191,11 +190,13 @@ namespace KUMIEmployees.UserControls
             MaleImg.Opacity = 1;
         }
 
+
         private void FemaleRB_Checked(object sender, RoutedEventArgs e)
         {
             FemaleLbl.FontWeight = FontWeights.Bold;
             FemaleImg.Opacity = 1;
         }
+
 
         private void MaleRB_Unchecked(object sender, RoutedEventArgs e)
         {
@@ -203,11 +204,25 @@ namespace KUMIEmployees.UserControls
             MaleImg.Opacity = 0.5;
         }
 
+
         private void FemaleRB_Unchecked(object sender, RoutedEventArgs e)
         {
             FemaleImg.Opacity = 0.5;
             FemaleLbl.FontWeight = FontWeights.Normal;
         }
 
+        private void JobPosition_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            ComboBox comboBox = (ComboBox)sender;
+            ComboBoxItem item = (ComboBoxItem)comboBox.SelectedItem;
+            JobPositionTB.Text = item.Content.ToString();
+        }
+
+        private void DegreeCombo_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            ComboBox comboBox = (ComboBox)sender;
+            ComboBoxItem item = (ComboBoxItem)comboBox.SelectedItem;
+            DegreeTB.Text = item.Content.ToString();
+        }
     }
 }

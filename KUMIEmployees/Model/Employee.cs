@@ -32,7 +32,7 @@ namespace KUMIEmployees.Model
     {
         Bachelor,
         Master,
-        Doctoral
+        Doctorate
     }
 
     public class Employee
@@ -44,7 +44,8 @@ namespace KUMIEmployees.Model
         public string Email { get; set; }
         public Gender Gender { get; set; }
         public DateTime BirthDate { get; set; }
-        public string JobPosition { get; set; }
+        public Jobs JobPosition { get; set; }
+        public UniversityDegree Degree{ get; set; }
         public string Tel { get; set; }
         public int Salary { get; set; }
         public int Bonus { get; set; }
@@ -55,13 +56,25 @@ namespace KUMIEmployees.Model
         {
             
         }
-        public Employee(int id, string name, string surename, string email, string jobPosition, string tel, int salary, int bonus)
+        public Employee(int id, string name, string surename, string email, Jobs jobPosition, string tel, int salary, int bonus)
         {
             Id = id;
             Name = name;
             Surename = surename;
             Email = email;
             JobPosition = jobPosition;
+            Tel = tel;
+            Salary = salary;
+            Bonus = bonus;
+        }
+        public Employee(int id, string name, string surename, string email, Jobs jobPosition, UniversityDegree degree ,string tel, int salary, int bonus)
+        {
+            Id = id;
+            Name = name;
+            Surename = surename;
+            Email = email;
+            JobPosition = jobPosition;
+            Degree = degree;
             Tel = tel;
             Salary = salary;
             Bonus = bonus;
