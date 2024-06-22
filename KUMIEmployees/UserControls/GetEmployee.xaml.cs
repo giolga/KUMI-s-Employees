@@ -1,4 +1,5 @@
-﻿using System;
+﻿using KUMIEmployees.Model;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,6 +21,8 @@ namespace KUMIEmployees.UserControls
     /// </summary>
     public partial class GetEmployee : UserControl
     {
+        public delegate void GetEmployeeFromMyComapny(int empId);
+        public event GetEmployeeFromMyComapny GetPerson;
         public GetEmployee()
         {
             InitializeComponent();
@@ -27,7 +30,13 @@ namespace KUMIEmployees.UserControls
 
         private void SearchBtn_Click(object sender, RoutedEventArgs e)
         {
-
+            try
+            {
+                GetPerson?.Invoke(int.Parse(GetEmployeeTB.Text.ToString()));
+            }
+            catch (Exception ex) {
+                MessageBox.Show(ex.Message);
+            }
         }
     }
 }

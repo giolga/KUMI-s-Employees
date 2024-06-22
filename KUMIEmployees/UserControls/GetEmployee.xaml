@@ -23,7 +23,7 @@
             </Grid.RowDefinitions>
 
             <Grid Grid.Row="0">
-                <Image Margin="0, 20, 0, 5" Stretch="Uniform" Height="100" Width="110" Visibility="Visible" Source="/Images/add-person.png" />
+                <Image Margin="0, 20, 0, 5" Stretch="Uniform" Height="100" Width="110" Visibility="Visible" Source="/Images/add-person.png" Name="employeePhoto"/>
             </Grid>
 
             <Grid Grid.Row="1" Width="300">
@@ -93,7 +93,7 @@
 
             <StackPanel Orientation="Horizontal" Grid.Row="0">
 
-                <TextBox  Height="25" Background="#FFD6A5" Width="120" HorizontalAlignment="Left" TextWrapping="Wrap" Margin="80, 0, 0, 0" Name="GetEmployeeTB">
+                <TextBox  Height="25" Background="#FFD6A5" Width="120" HorizontalAlignment="Left" TextWrapping="Wrap" Margin="80, 0, 0, 0" Name="GetEmployeeTB" VerticalContentAlignment="Center">
                     <TextBox.BorderBrush>
                         <SolidColorBrush Color="#483C32" />
                     </TextBox.BorderBrush>

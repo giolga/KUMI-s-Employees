@@ -27,15 +27,10 @@ namespace KUMIEmployees.UserControls
         public event AddNewEmployeeInMyCompany addNewEmployeeInMyCompany;
 
         public static Employee addNewEmployee;
-        public static string imageUrl;
+        public static string imageUrl = "/Images/add-person.png";
         public AddEmployee()
         {
             InitializeComponent();
-        }
-
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-
         }
 
         private void DistractedBtn_Click(object sender, RoutedEventArgs e)
@@ -164,10 +159,6 @@ namespace KUMIEmployees.UserControls
                 MessageBox.Show($"Given person Uni Degree: {addNewEmployee.Degree}");
             }
 
-            //if (addNewEmployeeInMyCompany != null)
-            //{
-            //    addNewEmployeeInMyCompany(addNewEmployee);
-            //}
         }
 
 

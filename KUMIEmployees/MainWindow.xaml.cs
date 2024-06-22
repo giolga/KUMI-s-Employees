@@ -26,7 +26,9 @@ namespace KUMIEmployees
         private static string[] jobs = { "Network Administrator", "Pentester", "Software_Developer", "Software_Engineer", "Devops_Engineer", "Sys_Admin", "Manager", "Front_End_Developer", "Support", "Accountant", "Guard" };
         private Random random = new Random();
 
-        public static Employee emp = new Employee();
+        public static List<Employee> employees = new List<Employee>(); // List of employees
+
+        //public static Employee emp = new Employee();
         public MainWindow()
         {
             InitializeComponent();
@@ -34,6 +36,7 @@ namespace KUMIEmployees
             //string nameTxtFile = "C:\\Users\\Mikey\\OneDrive\\Desktop\\KUMIEmployees\\KUMIEmployees\\names.txt";
             //string surenameTxtFile = "C:\\Users\\Mikey\\OneDrive\\Desktop\\KUMIEmployees\\KUMIEmployees\\surenames.txt";
             addEmployeeUC.addNewEmployeeInMyCompany += AddEmp;
+            getEmploye.GetPerson += GetEmp;
 
             string basePath = Environment.CurrentDirectory;
 
@@ -61,13 +64,42 @@ namespace KUMIEmployees
             {
                 Employee emp = new Employee(i + 1, names[i], surenames[i], $"{names[i][0].ToString().ToLower()}.{surenames[i].ToString().ToLower()}@gmail.com", Jobs.Software_Engineer, "+995557443766", 2000, 150);
                 ShowAllDG.Items.Add(emp);
+                employees.Add(emp);
             }
 
             //ShowAllDG.Items.RemoveAt(40);
         }
 
-        public void AddEmp(Employee myEmp) {
+        public void AddEmp(Employee myEmp)
+        {
             ShowAllDG.Items.Add(myEmp);
+            employees.Add(myEmp);
+        }
+
+        public void GetEmp(int empId)
+        {
+            var myEmp = employees.FirstOrDefault(e => e.Id == empId);
+
+            if (myEmp == null)
+            {
+                MessageBox.Show($"No such employee exists in My Company (Probably he/she doesn't deserve it): {empId}");
+                return;
+            }
+
+            getEmploye.employeePhoto.Source = new BitmapImage(new Uri(myEmp.ImageUrl, UriKind.RelativeOrAbsolute));
+            getEmploye.NameTBl.Text = myEmp.Name;
+            getEmploye.LastnameTBl.Text = myEmp.Surename;
+            getEmploye.MobileTBl.Text = myEmp.Tel;
+            getEmploye.EmailTBl.Text = myEmp.Email;
+            getEmploye.GenderTBl.Text = myEmp.Gender.ToString();
+            getEmploye.AddressTBl.Text = "Natlughi <3";
+            getEmploye.BirthDateTBl.Text = myEmp.BirthDate.ToString();
+            getEmploye.AgeTBl.Text = "21rti";
+            getEmploye.PersonalIdTBl.Text = myEmp.PersonalId;
+            getEmploye.UniversityDegreeDBl.Text = myEmp.Degree.ToString();
+            getEmploye.JobPositionTBl.Text = myEmp.JobPosition.ToString().Replace('_', ' ');
+            getEmploye.BiographyTBl.Text = myEmp.Biography;
+
         }
     }
 }
