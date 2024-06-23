@@ -141,7 +141,7 @@ namespace KUMIEmployees.UserControls
                 addNewEmployee.Name = NameTB.Text.ToString();
                 addNewEmployee.Surename = SurenameTB.Text.ToString();
                 addNewEmployee.PersonalId = PersonalIDTB.Text.ToString();
-                addNewEmployee.Email = $"{NameTB.Text[0].ToString().ToLower()}.{SurenameTB.Text.ToString().ToLower()}@gmail.com";
+                addNewEmployee.Email = $"{NameTB.Text[0].ToString().ToLower()}.{SurenameTB.Text.ToString().ToLower().Replace(' ', '_')}@gmail.com";
                 addNewEmployee.Gender = Gender.Male;
                 addNewEmployee.BirthDate = empBirthDay;
                 addNewEmployee.JobPosition = (Jobs)Enum.Parse(typeof(Jobs), JobPositionTB.Text.ToString().Replace(' ', '_'));

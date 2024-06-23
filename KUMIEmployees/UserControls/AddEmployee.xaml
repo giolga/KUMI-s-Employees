@@ -22,7 +22,9 @@
             </Setter>
         </Style>
     </UserControl.Resources>
+
     <Grid>
+
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="0.6*"/>
             <ColumnDefinition Width="*"/>
@@ -212,7 +214,7 @@
                                             <ComboBoxItem Name="Accountant" Tag="Accountant">Accountant</ComboBoxItem>
                                             <ComboBoxItem Name="Guard" Tag="Guard">Guard</ComboBoxItem>
                                         </ComboBox>
-                                        
+
                                     </Grid>
                                 </Border>
 
@@ -237,7 +239,7 @@
                                             <ComboBoxItem Name="Bachelor" Tag="Bachelor">Bachelor</ComboBoxItem>
                                             <ComboBoxItem Name="Master" Tag="Master">Master</ComboBoxItem>
                                             <ComboBoxItem Name="Doctorate" Tag="Doctorate">Doctorate</ComboBoxItem>
-                                            
+
                                         </ComboBox>
                                     </Grid>
                                 </Border>

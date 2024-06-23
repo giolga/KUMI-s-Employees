@@ -5,79 +5,79 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:KUMIEmployees.UserControls"
              mc:Ignorable="d" 
-             d:DesignHeight="450" d:DesignWidth="800"
+             d:DesignHeight="600" d:DesignWidth="1000"
              Background="#CB997E"
              Name="GetEmployeeUC"
-             Height="450"
-             Width="800">
+             Height="600"
+             Width="1000">
     <Grid>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="430"/>
+            <ColumnDefinition Width="538"/>
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
 
         <Grid Grid.Column="0">
             <Grid.RowDefinitions>
-                <RowDefinition Height="170" />
+                <RowDefinition Height="213" />
                 <RowDefinition Height="*" />
             </Grid.RowDefinitions>
 
             <Grid Grid.Row="0">
-                <Image Margin="0, 20, 0, 5" Stretch="Uniform" Height="100" Width="110" Visibility="Visible" Source="/Images/add-person.png" Name="employeePhoto"/>
+                <Image Margin="0, 20, 0, 5" Stretch="Uniform" Height="140" Width="138" Visibility="Visible" Source="/Images/add-person.png" Name="employeePhoto"/>
             </Grid>
 
-            <Grid Grid.Row="1" Width="300">
+            <Grid Grid.Row="1" Width="400">
                 <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="150"/>
+                    <ColumnDefinition Width="200"/>
                     <ColumnDefinition Width="*"/>
                 </Grid.ColumnDefinitions>
 
                 <StackPanel Grid.Column="0" Orientation="Vertical">
-                    <Label Content="First Name" Name="NameLbl" FontWeight="SemiBold" Foreground="#483C32" />
-                    <Border Margin="5, 0, 5, 0" Height="25" Background="#FFE8D6" CornerRadius="5">
-                        <TextBlock Name="NameTBl" />
+                    <Label Content="First Name" Name="NameLbl" FontWeight="SemiBold" Foreground="#483C32" FontSize="18" />
+                    <Border Margin="5, 0, 5, 0" Height="35" Background="#FFE8D6" CornerRadius="5">
+                        <TextBlock Name="NameTBl" FontSize="16" VerticalAlignment="Center" TextWrapping="Wrap"/>
                     </Border>
 
-                    <Label Content="Phone Number" Name="MobileLbl" FontWeight="SemiBold" Foreground="#483C32" />
-                    <Border Margin="5, 0, 5, 0" Height="25" Background="#FFE8D6" CornerRadius="5">
-                        <TextBlock Name="MobileTBl" />
+                    <Label Content="Phone Number" Name="MobileLbl" FontWeight="SemiBold" Foreground="#483C32"  FontSize="18" />
+                    <Border Margin="5, 0, 5, 0" Height="35" Background="#FFE8D6" CornerRadius="5">
+                        <TextBlock Name="MobileTBl" FontSize="16" VerticalAlignment="Center" TextWrapping="Wrap"/>
                     </Border>
 
-                    <Label Content="Gender" Name="GenderLbl" FontWeight="SemiBold" Foreground="#483C32" />
-                    <Border Margin="5, 0, 5, 0" Height="25" Background="#FFE8D6" CornerRadius="5">
-                        <TextBlock Name="GenderTBl" />
+                    <Label Content="Gender" Name="GenderLbl" FontWeight="SemiBold" Foreground="#483C32" FontSize="18"  />
+                    <Border Margin="5, 0, 5, 0" Height="35" Background="#FFE8D6" CornerRadius="5">
+                        <TextBlock Name="GenderTBl" FontSize="16" VerticalAlignment="Center" TextWrapping="Wrap"/>
                     </Border>
 
-                    <Label Content="Birth Date" Name="BirthDateLbl" FontWeight="SemiBold" Foreground="#483C32" />
-                    <Border Margin="5, 0, 5, 0" Height="25" Background="#FFE8D6" CornerRadius="5">
-                        <TextBlock Name="BirthDateTBl" />
+                    <Label Content="Birth Date" Name="BirthDateLbl" FontWeight="SemiBold" Foreground="#483C32" FontSize="18" />
+                    <Border Margin="5, 0, 5, 0" Height="35" Background="#FFE8D6" CornerRadius="5">
+                        <TextBlock Name="BirthDateTBl" FontSize="16" VerticalAlignment="Center" TextWrapping="Wrap"/>
                     </Border>
 
-                    <Label Content="Personal Id" Name="PersonalIdLbl" FontWeight="SemiBold" Foreground="#483C32" />
-                    <Border Margin="5, 0, 5, 0" Height="25" Background="#FFE8D6" CornerRadius="5">
-                        <TextBlock Name="PersonalIdTBl" />
+                    <Label Content="Personal Id" Name="PersonalIdLbl" FontWeight="SemiBold" Foreground="#483C32" FontSize="18" />
+                    <Border Margin="5, 0, 5, 0" Height="35" Background="#FFE8D6" CornerRadius="5">
+                        <TextBlock Name="PersonalIdTBl" FontSize="16" VerticalAlignment="Center" TextWrapping="Wrap"/>
                     </Border>
                 </StackPanel>
 
                 <StackPanel Grid.Column="1" Orientation="Vertical">
-                    <Label Content="Last Name" Name="lastnameLbl" FontWeight="SemiBold" Foreground="#483C32" />
-                    <Border Margin="5, 0, 5, 0" Height="25" Background="#FFE8D6" CornerRadius="5">
-                        <TextBlock Name="LastnameTBl" />
+                    <Label Content="Last Name" Name="lastnameLbl" FontWeight="SemiBold" Foreground="#483C32" FontSize="18"  />
+                    <Border Margin="5, 0, 5, 0" Height="35" Background="#FFE8D6" CornerRadius="5">
+                        <TextBlock Name="LastnameTBl" FontSize="16" VerticalAlignment="Center" TextWrapping="Wrap"/>
                     </Border>
 
-                    <Label Content="Email" Name="EmailLbl" FontWeight="SemiBold" Foreground="#483C32" />
-                    <Border Margin="5, 0, 5, 0" Height="25" Background="#FFE8D6" CornerRadius="5">
-                        <TextBlock Name="EmailTBl" />
+                    <Label Content="Email" Name="EmailLbl" FontWeight="SemiBold" Foreground="#483C32" FontSize="18" />
+                    <Border Margin="5, 0, 5, 0" Height="35" Background="#FFE8D6" CornerRadius="5">
+                        <TextBlock Name="EmailTBl" FontSize="16" VerticalAlignment="Center" TextWrapping="Wrap"/>
                     </Border>
 
-                    <Label Content="Address" Name="AddressLbl" FontWeight="SemiBold" Foreground="#483C32" />
-                    <Border Margin="5, 0, 5, 0" Height="25" Background="#FFE8D6" CornerRadius="5">
-                        <TextBlock Name="AddressTBl" />
+                    <Label Content="Address" Name="AddressLbl" FontWeight="SemiBold" Foreground="#483C32" FontSize="18" />
+                    <Border Margin="5, 0, 5, 0" Height="35" Background="#FFE8D6" CornerRadius="5">
+                        <TextBlock Name="AddressTBl" FontSize="16" VerticalAlignment="Center" TextWrapping="Wrap"/>
                     </Border>
 
-                    <Label Content="Age" Name="AgeLbl" FontWeight="SemiBold" Foreground="#483C32" />
-                    <Border Margin="5, 0, 5, 0" Height="25" Background="#FFE8D6" CornerRadius="5">
-                        <TextBlock Name="AgeTBl" />
+                    <Label Content="Age" Name="AgeLbl" FontWeight="SemiBold" Foreground="#483C32" FontSize="18" />
+                    <Border Margin="5, 0, 5, 0" Height="35" Background="#FFE8D6" CornerRadius="5">
+                        <TextBlock Name="AgeTBl" FontSize="16" VerticalAlignment="Center" TextWrapping="Wrap"/>
                     </Border>
                 </StackPanel>
             </Grid>
@@ -85,15 +85,15 @@
 
         <Grid Grid.Column="1" Height="{Binding ElementName=GetEmployeeUC, Path=ActualHeight}" Margin="0, 0, 5, 0">
             <Grid.RowDefinitions>
-                <RowDefinition Height="100"/>
-                <RowDefinition Height="100"/>
-                <RowDefinition Height="150"/>
+                <RowDefinition Height="140"/>
+                <RowDefinition Height="140"/>
+                <RowDefinition Height="210"/>
                 <RowDefinition Height="*"/>
             </Grid.RowDefinitions>
 
             <StackPanel Orientation="Horizontal" Grid.Row="0">
 
-                <TextBox  Height="25" Background="#FFD6A5" Width="120" HorizontalAlignment="Left" TextWrapping="Wrap" Margin="80, 0, 0, 0" Name="GetEmployeeTB" VerticalContentAlignment="Center">
+                <TextBox  Height="35" Background="#FFD6A5" Width="150" HorizontalAlignment="Left" TextWrapping="Wrap" Margin="80, 0, 0, 0" Name="GetEmployeeTB" VerticalContentAlignment="Center" FontSize="16" VerticalAlignment="Center">
                     <TextBox.BorderBrush>
                         <SolidColorBrush Color="#483C32" />
                     </TextBox.BorderBrush>
@@ -106,13 +106,14 @@
                     </TextBox.Template>
                 </TextBox>
 
-                <Button Height="25" Width="60"  VerticalAlignment="Center" Name="SearchBtn" Click="SearchBtn_Click" Margin="30,0,0,0">
+                <Button Height="35" Width="75"  VerticalAlignment="Center" Name="SearchBtn" Click="SearchBtn_Click" Margin="30,0,0,0">
                     <!-- Directly setting the content inside the Button tag -->
                     Search
                     <Button.Style>
                         <Style TargetType="{x:Type Button}">
                             <Setter Property="Foreground" Value="White" />
                             <Setter Property="FontWeight" Value="SemiBold" />
+                            <Setter Property="FontSize" Value="17" />
                         </Style>
                     </Button.Style>
                     <Button.Template>
@@ -126,20 +127,20 @@
 
             </StackPanel>
             <Border CornerRadius="2" BorderThickness="0.5" BorderBrush="#483C32" Grid.Row="1" Margin="5">
-                <Grid Grid.Row="1" Width="300">
+                <Grid Grid.Row="1" Width="375">
                     <Grid.RowDefinitions>
-                        <RowDefinition Height="45" />
+                        <RowDefinition Height="65" />
                         <RowDefinition Height="*" />
                     </Grid.RowDefinitions>
 
 
-                    <Label Grid.Row="0" Foreground="#483C32" Content="University Degree"  HorizontalContentAlignment="Left" HorizontalAlignment="Left" Margin="45, 0, 0, 0" VerticalAlignment="Bottom" />
-                    <Label Grid.Row="0" Foreground="#483C32" Content="Job Position" HorizontalContentAlignment="Right" HorizontalAlignment="Right" Margin="0, 0, 45, 0" VerticalAlignment="Bottom" />
-                    <Border Margin="50, 0, 0, 0" Height="25" Background="#FFE8D6" CornerRadius="5" Grid.Row="1" HorizontalAlignment="Left" Width="100" VerticalAlignment="Top">
-                        <TextBlock x:Name="UniversityDegreeDBl" />
+                    <Label Grid.Row="0" Foreground="#483C32" Content="University Degree"  HorizontalContentAlignment="Left" HorizontalAlignment="Left" Margin="15, 0, 0, 0" VerticalAlignment="Bottom" FontSize="18" />
+                    <Label Grid.Row="0" Foreground="#483C32" Content="Job Position" HorizontalContentAlignment="Right" HorizontalAlignment="Right" Margin="0, 0, 60, 0" VerticalAlignment="Bottom" FontSize="18" />
+                    <Border Margin="18, 0, 0, 0" Height="35" Background="#FFE8D6" CornerRadius="5" Grid.Row="1" HorizontalAlignment="Left" Width="160" VerticalAlignment="Top">
+                        <TextBlock x:Name="UniversityDegreeDBl" FontSize="16" VerticalAlignment="Center"/>
                     </Border>
-                    <Border Margin="0, 0, 15, 0" Height="25" Background="#FFE8D6" CornerRadius="5" Grid.Row="1" HorizontalAlignment="Right" Width="100" VerticalAlignment="Top">
-                        <TextBlock x:Name="JobPositionTBl" />
+                    <Border Margin="0, 0, 5, 0" Height="35" Background="#FFE8D6" CornerRadius="5" Grid.Row="1" HorizontalAlignment="Right" Width="160" VerticalAlignment="Top">
+                        <TextBlock x:Name="JobPositionTBl" FontSize="16" VerticalAlignment="Center"/>
                     </Border>
                 </Grid>
             </Border>
@@ -148,13 +149,13 @@
 
                 <Grid Grid.Row="2">
                     <Grid.RowDefinitions>
-                        <RowDefinition Height="50" />
+                        <RowDefinition Height="88" />
                         <RowDefinition Height="*" />
                     </Grid.RowDefinitions>
 
-                    <Label Content="Biography" FontWeight="SemiBold" Foreground="#483C32" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="0, 0, 0, 10"/>
+                    <Label Content="Biography" FontWeight="SemiBold" Foreground="#483C32" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="0, 0, 0, 10" FontSize="18" />
 
-                    <Border Margin="5, 0, 5, 0" Height="80" Background="#FFE8D6" CornerRadius="5" Grid.Row="1" VerticalAlignment="Top">
+                    <Border Margin="5, 0, 5, 0" Height="110" Background="#FFE8D6" CornerRadius="5" Grid.Row="1" VerticalAlignment="Top">
                         <TextBlock Name="BiographyTBl" TextWrapping="Wrap" FontSize="16"/>
                     </Border>
                 </Grid>
@@ -163,12 +164,12 @@
             <Border CornerRadius="2" BorderThickness="0.5" BorderBrush="#483C32" Grid.Row="3" Margin="5">
                 <Grid Grid.Row="3">
                     <Grid.RowDefinitions>
-                        <RowDefinition Height="30" />
+                        <RowDefinition Height="42" />
                         <RowDefinition Height="*" />
                     </Grid.RowDefinitions>
-                    <Label Content="Employee Rating: /5" Foreground="#483C32" FontWeight="DemiBold" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Row="0"/>
-                    <StackPanel Orientation="Horizontal" Grid.Row="1">
-                        <Label Content="Here stars :))"/>
+                    <Label Content="Employee Rating: /5" Foreground="#483C32" FontWeight="DemiBold" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Row="0" FontSize="18" />
+                    <StackPanel Orientation="Horizontal" Grid.Row="1" >
+                        <Label Content="Here stars :))" FontSize="18" />
                     </StackPanel>
                 </Grid>
             </Border>

@@ -49,7 +49,7 @@ namespace KUMIEmployees.Model
         public string Tel { get; set; }
         public int Salary { get; set; }
         public int Bonus { get; set; }
-        public string ImageUrl { get; set; }
+        public string ImageUrl { get; set; } = "/Images/add-person.png";
         public string Biography {get; set; }
 
         public Employee()
