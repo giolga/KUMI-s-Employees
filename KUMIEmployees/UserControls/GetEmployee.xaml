@@ -106,7 +106,7 @@
                     </TextBox.Template>
                 </TextBox>
 
-                <Button Height="35" Width="75"  VerticalAlignment="Center" Name="SearchBtn" Click="SearchBtn_Click" Margin="30,0,0,0">
+                <Button Height="35" Width="75"  VerticalAlignment="Center" Name="SearchBtn" Click="SearchBtn_Click" Margin="30,0,0,0" MouseEnter="SearchBtn_MouseEnter" MouseLeave="SearchBtn_MouseLeave">
                     <!-- Directly setting the content inside the Button tag -->
                     Search
                     <Button.Style>
@@ -167,9 +167,9 @@
                         <RowDefinition Height="42" />
                         <RowDefinition Height="*" />
                     </Grid.RowDefinitions>
-                    <Label Content="Employee Rating: /5" Foreground="#483C32" FontWeight="DemiBold" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Row="0" FontSize="18" />
+                    <Label Content="Employee Rating: /5" Foreground="#483C32" FontWeight="DemiBold" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Row="0" FontSize="18" Margin="10, 0, 0, 10"/>
                     <StackPanel Orientation="Horizontal" Grid.Row="1" >
-                        <Label Content="Here stars :))" FontSize="18" />
+                        <Image Name="RatingImg" Width="160" Margin="10, 0, 0, 10"/>
                     </StackPanel>
                 </Grid>
             </Border>

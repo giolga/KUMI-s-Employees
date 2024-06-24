@@ -38,5 +38,15 @@ namespace KUMIEmployees.UserControls
                 MessageBox.Show(ex.Message);
             }
         }
+
+        private void SearchBtn_MouseEnter(object sender, MouseEventArgs e)
+        {
+            SearchBtn.Cursor = Cursors.Hand;
+        }
+
+        private void SearchBtn_MouseLeave(object sender, MouseEventArgs e)
+        {
+            SearchBtn.Cursor = Cursors.Arrow;
+        }
     }
 }

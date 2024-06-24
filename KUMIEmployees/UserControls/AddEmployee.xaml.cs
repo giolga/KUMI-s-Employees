@@ -136,8 +136,8 @@ namespace KUMIEmployees.UserControls
             }
             else
             {
-                MessageBox.Show("Everything is OK, Ready To Add Employee :)");
-                addNewEmployee.Id = 155;
+                //MessageBox.Show("Everything is OK, Ready To Add Employee :)");
+                addNewEmployee.Id = Employee.PersonId;
                 addNewEmployee.Name = NameTB.Text.ToString();
                 addNewEmployee.Surename = SurenameTB.Text.ToString();
                 addNewEmployee.PersonalId = PersonalIDTB.Text.ToString();
@@ -154,9 +154,12 @@ namespace KUMIEmployees.UserControls
 
                 addNewEmployeeInMyCompany?.Invoke(addNewEmployee);
 
+                Employee.PersonId++;
                 //MessageBox.Show($"Given person dateTime: {addNewEmployee.BirthDate}");
-                MessageBox.Show($"Given person Job Position: {addNewEmployee.JobPosition}");
-                MessageBox.Show($"Given person Uni Degree: {addNewEmployee.Degree}");
+                //MessageBox.Show($"Given person Job Position: {addNewEmployee.JobPosition}");
+                //MessageBox.Show($"Given person Uni Degree: {addNewEmployee.Degree}");
+
+                MessageBox.Show("User successfully added!");
             }
 
         }
@@ -214,6 +217,16 @@ namespace KUMIEmployees.UserControls
             ComboBox comboBox = (ComboBox)sender;
             ComboBoxItem item = (ComboBoxItem)comboBox.SelectedItem;
             DegreeTB.Text = item.Content.ToString();
+        }
+
+        private void SaveBtn_MouseEnter(object sender, MouseEventArgs e)
+        {
+            SaveBtn.Cursor = Cursors.Hand;
+        }
+
+        private void SaveBtn_MouseLeave(object sender, MouseEventArgs e)
+        {
+            SaveBtn.Cursor = Cursors.Arrow;
         }
     }
 }

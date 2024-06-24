@@ -37,6 +37,7 @@ namespace KUMIEmployees.Model
 
     public class Employee
     {
+        public static int PersonId { get; set; } = 42;
         public int Id { get; set; }
         public string Name { get; set; }
         public string Surename { get; set; }

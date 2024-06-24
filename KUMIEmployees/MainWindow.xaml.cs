@@ -24,7 +24,7 @@ namespace KUMIEmployees
     public partial class MainWindow : Window
     {
         private static string[] jobs = { "Network Administrator", "Pentester", "Software_Developer", "Software_Engineer", "Devops_Engineer", "Sys_Admin", "Manager", "Front_End_Developer", "Support", "Accountant", "Guard" };
-        private Random random = new Random();
+        private static Random random = new Random();
 
         public static List<Employee> employees = new List<Employee>(); // List of employees
 
@@ -62,7 +62,7 @@ namespace KUMIEmployees
 
             for (int i = 0; i < names.Length; i++)
             {
-                Employee emp = new Employee(i + 1, names[i], surenames[i], $"{names[i][0].ToString().ToLower()}.{surenames[i].ToString().ToLower()}@gmail.com", Jobs.Software_Engineer, "+995557443766", 2000, 150);
+                Employee emp = new Employee(i + 1, names[i], surenames[i], $"{names[i][0].ToString().ToLower()}.{surenames[i].ToString().ToLower()}@gmail.com", Jobs.Software_Engineer, "+995557443766", random.Next(1200, 3501), random.Next(100, 551));
                 ShowAllDG.Items.Add(emp);
                 employees.Add(emp);
             }
@@ -99,6 +99,9 @@ namespace KUMIEmployees
             getEmploye.UniversityDegreeDBl.Text = myEmp.Degree.ToString();
             getEmploye.JobPositionTBl.Text = myEmp.JobPosition.ToString().Replace('_', ' ');
             getEmploye.BiographyTBl.Text = myEmp.Biography;
+
+            int rating = random.Next(1, 6);
+            getEmploye.RatingImg.Source = new BitmapImage(new Uri($"/Images/Rating/{rating}stars.png", UriKind.RelativeOrAbsolute));
 
         }
     }

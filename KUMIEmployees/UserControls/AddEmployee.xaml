@@ -277,7 +277,7 @@
                             </TextBox.Template>
                         </TextBox>
 
-                        <Button Height="42" Width="63" HorizontalAlignment="Right" VerticalAlignment="Bottom"  Name="SaveBtn" Click="SaveBtn_Click" FontSize="18" >
+                        <Button Height="42" Width="63" HorizontalAlignment="Right" VerticalAlignment="Bottom"  Name="SaveBtn" Click="SaveBtn_Click" FontSize="18" MouseEnter="SaveBtn_MouseEnter" MouseLeave="SaveBtn_MouseLeave">
                             <Button.Content>
                                 Save
                             </Button.Content>
