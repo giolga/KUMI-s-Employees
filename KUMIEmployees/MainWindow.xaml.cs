@@ -101,7 +101,11 @@ namespace KUMIEmployees
             getEmploye.BiographyTBl.Text = myEmp.Biography;
 
             int rating = random.Next(1, 6);
-            getEmploye.RatingImg.Source = new BitmapImage(new Uri($"/Images/Rating/{rating}stars.png", UriKind.RelativeOrAbsolute));
+            for(int i = 0; i < rating; i++)
+            {
+                getEmploye.RatingLbl.Content += '⭐'.ToString();
+                getEmploye.EmpLblRating.Content = $"Employee Rating: {rating}/5";
+            }
 
         }
     }
