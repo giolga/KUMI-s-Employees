@@ -138,7 +138,9 @@
   <ItemGroup>
     <Resource Include="Images\Gender\female.png" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Resource Include="EmployeeList\personalIDs.txt" />
+  </ItemGroup>
   <ItemGroup>
     <Resource Include="Images\Rating\1stars.png" />
     <Resource Include="Images\Rating\2stars.png" />

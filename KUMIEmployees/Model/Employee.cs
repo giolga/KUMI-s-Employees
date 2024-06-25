@@ -68,6 +68,18 @@ namespace KUMIEmployees.Model
             Salary = salary;
             Bonus = bonus;
         }
+        public Employee(int id, string name, string surename, string personalId ,string email, Jobs jobPosition, string tel, int salary, int bonus)
+        {
+            Id = id;
+            Name = name;
+            Surename = surename;
+            PersonalId  = personalId;
+            Email = email;
+            JobPosition = jobPosition;
+            Tel = tel;
+            Salary = salary;
+            Bonus = bonus;
+        }
         public Employee(int id, string name, string surename, string email, Jobs jobPosition, UniversityDegree degree ,string tel, int salary, int bonus)
         {
             Id = id;

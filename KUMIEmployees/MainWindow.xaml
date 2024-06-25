@@ -11,14 +11,15 @@
         <TabControl>
 
             <TabItem Header="Show All">
-                <Grid Width="730" HorizontalAlignment="Center">
+                <Grid Width="900" HorizontalAlignment="Center">
                     <Label Content="Show All"/>
 
-                    <DataGrid x:Name="ShowAllDG" AutoGenerateColumns="False"  CanUserAddRows="False" SelectionUnit="Cell" VerticalScrollBarVisibility="Auto" Height="400">
+                    <DataGrid x:Name="ShowAllDG" AutoGenerateColumns="False"  CanUserAddRows="False" SelectionUnit="Cell" VerticalScrollBarVisibility="Auto" Height="400" Width="800">
                         <DataGrid.Columns>
                             <DataGridTextColumn Header="Employee Id" Binding="{Binding Id}" Width="75"/>
                             <DataGridTextColumn Header="Name" Binding="{Binding Name}" Width="75"/>
                             <DataGridTextColumn Header="Surename" Binding="{Binding Surename}" Width="90"/>
+                            <DataGridTextColumn Header="Personal Id" Binding="{Binding PersonalId}" Width="90"/>
                             <DataGridTextColumn Header="Gmail" Binding="{Binding Email}" Width="160"/>
                             <DataGridTextColumn Header="Job Position" Binding="{Binding JobPosition}" Width="80"/>
                             <DataGridTextColumn Header="Telephone Number" Binding="{Binding Tel}"/>

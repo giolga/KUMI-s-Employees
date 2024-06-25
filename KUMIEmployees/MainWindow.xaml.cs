@@ -29,6 +29,7 @@ namespace KUMIEmployees
         public static List<Employee> employees = new List<Employee>(); // List of employees
 
         //public static Employee emp = new Employee();
+
         public MainWindow()
         {
             InitializeComponent();
@@ -52,17 +53,21 @@ namespace KUMIEmployees
             // Get all files named "names.txt" in the specified directory
             string[] filePathsName = Directory.GetFiles(employeeListPath, "names.txt");
             string[] filePathsSurename = Directory.GetFiles(employeeListPath, "surenames.txt");
+            string[] filePathsIds = Directory.GetFiles(employeeListPath, "personalIDs.txt");
 
             //MessageBox.Show($"{filePathsName[0]}");
 
             string[] names = File.ReadAllLines(filePathsName[0]);
             string[] surenames = File.ReadAllLines(filePathsSurename[0]);
+            string[] personalIDs = File.ReadAllLines(filePathsIds[0]);
 
             //MessageBox.Show(surenames.Length.ToString());
 
+            //MessageBox.Show($"Count of Personal IDs {personalIDs[0]}");
+
             for (int i = 0; i < names.Length; i++)
             {
-                Employee emp = new Employee(i + 1, names[i], surenames[i], $"{names[i][0].ToString().ToLower()}.{surenames[i].ToString().ToLower()}@gmail.com", Jobs.Software_Engineer, "+995557443766", random.Next(1200, 3501), random.Next(100, 551));
+                Employee emp = new Employee(i + 1, names[i], surenames[i], personalIDs[i] ,$"{names[i][0].ToString().ToLower()}.{surenames[i].ToString().ToLower()}@gmail.com", Jobs.Software_Engineer, "+995557443766", random.Next(1200, 3501), random.Next(100, 551));
                 ShowAllDG.Items.Add(emp);
                 employees.Add(emp);
             }
@@ -101,7 +106,7 @@ namespace KUMIEmployees
             getEmploye.BiographyTBl.Text = myEmp.Biography;
 
             int rating = random.Next(1, 6);
-            for(int i = 0; i < rating; i++)
+            for (int i = 0; i < rating; i++)
             {
                 getEmploye.RatingLbl.Content += '⭐'.ToString();
                 getEmploye.EmpLblRating.Content = $"Employee Rating: {rating}/5";
