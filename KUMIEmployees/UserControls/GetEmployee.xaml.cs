@@ -30,6 +30,7 @@ namespace KUMIEmployees.UserControls
 
         private void SearchBtn_Click(object sender, RoutedEventArgs e)
         {
+            RatingLbl.Content = string.Empty;
             try
             {
                 GetPerson?.Invoke(int.Parse(GetEmployeeTB.Text.ToString()));

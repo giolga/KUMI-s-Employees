@@ -162,15 +162,13 @@
             </Border>
 
             <Border CornerRadius="2" BorderThickness="0.5" BorderBrush="#483C32" Grid.Row="3" Margin="5">
-                <Grid Grid.Row="3">
+                <Grid>
                     <Grid.RowDefinitions>
-                        <RowDefinition Height="42" />
-                        <RowDefinition Height="*" />
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
                     </Grid.RowDefinitions>
-                    <Label Content="Employee Rating: /5" Foreground="#483C32" FontWeight="DemiBold" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Row="0" FontSize="18" Margin="10, 0, 0, 10"/>
-                    <StackPanel Orientation="Horizontal" Grid.Row="1" >
-                        <Image Name="RatingImg" Width="160" Margin="10, 0, 0, 10"/>
-                    </StackPanel>
+                    <Label Content="Employee Rating: /5" Name="EmpLblRating" Foreground="#483C32" FontWeight="DemiBold" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Row="0" FontSize="18" Margin="10, 10, 0, 0"/>
+                    <Label x:Name="RatingLbl"  FontSize="50" Foreground="Yellow" Width="220" HorizontalAlignment="Left" Margin="0,20,0,0" Height="60" Grid.Row="0" VerticalAlignment="Top"/>
                 </Grid>
             </Border>
 
