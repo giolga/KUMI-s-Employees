@@ -173,7 +173,7 @@ namespace KUMIEmployees.UserControls
             {
                 AddPersonImg.Source = new BitmapImage(new Uri(openFileDialog.FileName, UriKind.Absolute));
                 imageUrl = openFileDialog.FileName;
-                MessageBox.Show(openFileDialog.FileName);
+                //MessageBox.Show(openFileDialog.FileName);
             }
         }
 

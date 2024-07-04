@@ -78,3 +78,5 @@ C:\Users\Mikey\OneDrive\Desktop\C#\KUMI-s-Employees\KUMI-s-Employees\KUMIEmploye
 C:\Users\Mikey\OneDrive\Desktop\C#\KUMI-s-Employees\KUMI-s-Employees\KUMIEmployees\obj\Debug\KUMIEmployees.csproj.CoreCompileInputs.cache
 C:\Users\Mikey\OneDrive\Desktop\C#\KUMI-s-Employees\KUMI-s-Employees\KUMIEmployees\obj\Debug\KUMIEmployees.exe
 C:\Users\Mikey\OneDrive\Desktop\C#\KUMI-s-Employees\KUMI-s-Employees\KUMIEmployees\obj\Debug\KUMIEmployees.pdb
+C:\Users\Mikey\OneDrive\Desktop\C#\KUMI-s-Employees\KUMIEmployees\obj\Debug\Pages\AdminPage.g.cs
+C:\Users\Mikey\OneDrive\Desktop\C#\KUMI-s-Employees\KUMIEmployees\obj\Debug\Pages\AdminPage.baml
