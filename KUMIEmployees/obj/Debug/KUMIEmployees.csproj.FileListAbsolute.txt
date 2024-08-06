@@ -103,3 +103,27 @@ C:\Users\GioLGA\Desktop\KUMI-s-Employees\KUMI-s-Employees\KUMIEmployees\obj\Debu
 C:\Users\GioLGA\Desktop\KUMI-s-Employees\KUMI-s-Employees\KUMIEmployees\obj\Debug\KUMIEmployees.exe
 C:\Users\GioLGA\Desktop\KUMI-s-Employees\KUMI-s-Employees\KUMIEmployees\obj\Debug\KUMIEmployees.pdb
 >>>>>>> origin/main
+C:\Users\Mikey\Desktop\C#\KUMI-s-Employees\KUMIEmployees\obj\Debug\KUMIEmployees.csproj.AssemblyReference.cache
+C:\Users\Mikey\Desktop\C#\KUMI-s-Employees\KUMIEmployees\obj\Debug\Pages\AdminPage.g.cs
+C:\Users\Mikey\Desktop\C#\KUMI-s-Employees\KUMIEmployees\obj\Debug\MainWindow.g.cs
+C:\Users\Mikey\Desktop\C#\KUMI-s-Employees\KUMIEmployees\obj\Debug\UserControls\AddEmployee.g.cs
+C:\Users\Mikey\Desktop\C#\KUMI-s-Employees\KUMIEmployees\obj\Debug\UserControls\DeleteEmployee.g.cs
+C:\Users\Mikey\Desktop\C#\KUMI-s-Employees\KUMIEmployees\obj\Debug\UserControls\GetEmployee.g.cs
+C:\Users\Mikey\Desktop\C#\KUMI-s-Employees\KUMIEmployees\obj\Debug\App.g.cs
+C:\Users\Mikey\Desktop\C#\KUMI-s-Employees\KUMIEmployees\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\Mikey\Desktop\C#\KUMI-s-Employees\KUMIEmployees\obj\Debug\KUMIEmployees_MarkupCompile.cache
+C:\Users\Mikey\Desktop\C#\KUMI-s-Employees\KUMIEmployees\obj\Debug\KUMIEmployees_MarkupCompile.lref
+C:\Users\Mikey\Desktop\C#\KUMI-s-Employees\KUMIEmployees\obj\Debug\KUMIEmployees.exe
+C:\Users\Mikey\Desktop\C#\KUMI-s-Employees\KUMIEmployees\obj\Debug\KUMIEmployees.pdb
+C:\Users\Mikey\Desktop\C#\KUMI-s-Employees\KUMIEmployees\bin\Debug\KUMIEmployees.exe.config
+C:\Users\Mikey\Desktop\C#\KUMI-s-Employees\KUMIEmployees\bin\Debug\KUMIEmployees.exe
+C:\Users\Mikey\Desktop\C#\KUMI-s-Employees\KUMIEmployees\bin\Debug\KUMIEmployees.pdb
+C:\Users\Mikey\Desktop\C#\KUMI-s-Employees\KUMIEmployees\obj\Debug\Pages\AdminPage.baml
+C:\Users\Mikey\Desktop\C#\KUMI-s-Employees\KUMIEmployees\obj\Debug\MainWindow.baml
+C:\Users\Mikey\Desktop\C#\KUMI-s-Employees\KUMIEmployees\obj\Debug\UserControls\AddEmployee.baml
+C:\Users\Mikey\Desktop\C#\KUMI-s-Employees\KUMIEmployees\obj\Debug\UserControls\GetEmployee.baml
+C:\Users\Mikey\Desktop\C#\KUMI-s-Employees\KUMIEmployees\obj\Debug\UserControls\DeleteEmployee.baml
+C:\Users\Mikey\Desktop\C#\KUMI-s-Employees\KUMIEmployees\obj\Debug\KUMIEmployees.g.resources
+C:\Users\Mikey\Desktop\C#\KUMI-s-Employees\KUMIEmployees\obj\Debug\KUMIEmployees.Properties.Resources.resources
+C:\Users\Mikey\Desktop\C#\KUMI-s-Employees\KUMIEmployees\obj\Debug\KUMIEmployees.csproj.GenerateResource.cache
+C:\Users\Mikey\Desktop\C#\KUMI-s-Employees\KUMIEmployees\obj\Debug\KUMIEmployees.csproj.CoreCompileInputs.cache

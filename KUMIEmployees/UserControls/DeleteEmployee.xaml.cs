@@ -24,5 +24,15 @@ namespace KUMIEmployees.UserControls
         {
             InitializeComponent();
         }
+
+        private void SearchBtn_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void SearchBtn_MouseEnter(object sender, MouseEventArgs e)
+        {
+
+        }
     }
 }

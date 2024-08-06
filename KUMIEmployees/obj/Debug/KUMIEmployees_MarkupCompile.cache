@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 C:\Users\Mikey\Desktop\C#\KUMI-s-Employees\KUMIEmployees\App.xaml
-478426934
+5-1470876644
 
-101886241996
+101183229165
 13-38814620
-Pages\AdminPage.xaml;MainWindow.xaml;UserControls\AddEmployee.xaml;UserControls\GetEmployee.xaml;
+Pages\AdminPage.xaml;MainWindow.xaml;UserControls\AddEmployee.xaml;UserControls\DeleteEmployee.xaml;UserControls\GetEmployee.xaml;
 
-True
+False
 

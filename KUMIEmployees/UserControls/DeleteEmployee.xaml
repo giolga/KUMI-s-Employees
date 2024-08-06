@@ -11,8 +11,46 @@
              d:DesignHeight="600" d:DesignWidth="1000">
     <Grid>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="0.3*" />
+            <ColumnDefinition Width="0.3*"/>
             <ColumnDefinition Width="*" />
         </Grid.ColumnDefinitions>
+
+        <Grid Grid.Column="0" Width="195" Background="#D9B8E2">
+            <StackPanel Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0, 50, 0, 0">
+                <Image Source="/Images/add-person.png" Width="150"/>
+                <StackPanel Orientation="Horizontal" Margin="0,20,0,0">
+                    <TextBox Margin="5, 0, 5, 0" Height="35" Name="BirthTB"  Background="#FFE8D6" Width="94" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalContentAlignment="Center" FontSize="16">
+                        <TextBox.BorderBrush>
+                            <SolidColorBrush Color="Black" />
+                        </TextBox.BorderBrush>
+                        <TextBox.Template>
+                            <ControlTemplate TargetType="TextBox">
+                                <Border CornerRadius="5" Background="{TemplateBinding Background}">
+                                    <ScrollViewer x:Name="PART_ContentHost" />
+                                </Border>
+                            </ControlTemplate>
+                        </TextBox.Template>
+                    </TextBox>
+                    <Button Height="35" Width="63" HorizontalAlignment="Right" VerticalAlignment="Bottom"  Name="SearchBtn" Click="SearchBtn_Click" FontSize="18" MouseEnter="SearchBtn_MouseEnter" MouseLeave="SearchBtn_MouseEnter">
+                        <Button.Content>
+                            Search
+                        </Button.Content>
+                        <Button.Style>
+                            <Style  TargetType="{x:Type Button}">
+                                <Setter Property="Foreground" Value="White" />
+                                <Setter Property="FontWeight" Value="SemiBold"/>
+                            </Style>
+                        </Button.Style>
+                        <Button.Template>
+                            <ControlTemplate TargetType="Button">
+                                <Border CornerRadius="2" BorderThickness="1" BorderBrush="#521d0b" Background="#9F4DB5">
+                                    <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
+                                </Border>
+                            </ControlTemplate>
+                        </Button.Template>
+                    </Button>
+                </StackPanel>
+            </StackPanel>
+        </Grid>
     </Grid>
 </UserControl>

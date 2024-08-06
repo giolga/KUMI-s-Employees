@@ -42,7 +42,8 @@
             </TabItem>
 
             <TabItem Header="Delete Employee">
-                <Label Content="DELETE"/>
+                <!--<Label Content="DELETE"/>-->
+                <uc:DeleteEmployee />
             </TabItem>
         </TabControl>
     </Grid>
