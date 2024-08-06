@@ -4,22 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\GioLGA\Desktop\KUMI-s-Employees\KUMI-s-Employees\KUMIEmployees\obj\Debug\
+C:\Users\Mikey\Desktop\C#\KUMI-s-Employees\KUMIEmployees\obj\Debug\
 KUMIEmployees
 none
 false
 DEBUG;TRACE
-<<<<<<< HEAD
-C:\Users\Mikey\OneDrive\Desktop\C#\KUMI-s-Employees\KUMIEmployees\App.xaml
-478426934
-=======
-C:\Users\GioLGA\Desktop\KUMI-s-Employees\KUMI-s-Employees\KUMIEmployees\App.xaml
-3-2048884944
->>>>>>> origin/main
+C:\Users\Mikey\Desktop\C#\KUMI-s-Employees\KUMIEmployees\App.xaml
+5-1470876644
 
-101886241996
+11-1189960010
 13-38814620
-Pages\AdminPage.xaml;MainWindow.xaml;UserControls\AddEmployee.xaml;UserControls\GetEmployee.xaml;
+Pages\AdminPage.xaml;MainWindow.xaml;UserControls\AddEmployee.xaml;UserControls\DeleteEmployee.xaml;UserControls\GetEmployee.xaml;
 
-False
+True
 
