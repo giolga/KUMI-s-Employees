@@ -27,12 +27,19 @@ namespace KUMIEmployees.UserControls
 
         private void SearchBtn_Click(object sender, RoutedEventArgs e)
         {
+            Button myBtn = new Button() { Content = "Some button", Width = 100, Height = 20 };
 
+            InfoGrid.Children.Add(myBtn);
         }
 
         private void SearchBtn_MouseEnter(object sender, MouseEventArgs e)
         {
+            SearchBtn.Cursor = Cursors.Hand;
+        }
 
+        private void SearchBtn_MouseLeave(object sender, MouseEventArgs e)
+        {
+            SearchBtn.Cursor = Cursors.Arrow;
         }
     }
 }

@@ -65,6 +65,9 @@
     <Compile Include="UserControls\DeleteEmployee.xaml.cs">
       <DependentUpon>DeleteEmployee.xaml</DependentUpon>
     </Compile>
+    <Compile Include="UserControls\DeleteEmployeeInfo.xaml.cs">
+      <DependentUpon>DeleteEmployeeInfo.xaml</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\GetEmployee.xaml.cs">
       <DependentUpon>GetEmployee.xaml</DependentUpon>
     </Compile>
@@ -89,6 +92,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="UserControls\DeleteEmployee.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\DeleteEmployeeInfo.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
