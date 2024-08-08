@@ -127,3 +127,5 @@ C:\Users\Mikey\Desktop\C#\KUMI-s-Employees\KUMIEmployees\obj\Debug\KUMIEmployees
 C:\Users\Mikey\Desktop\C#\KUMI-s-Employees\KUMIEmployees\obj\Debug\KUMIEmployees.Properties.Resources.resources
 C:\Users\Mikey\Desktop\C#\KUMI-s-Employees\KUMIEmployees\obj\Debug\KUMIEmployees.csproj.GenerateResource.cache
 C:\Users\Mikey\Desktop\C#\KUMI-s-Employees\KUMIEmployees\obj\Debug\KUMIEmployees.csproj.CoreCompileInputs.cache
+C:\Users\Mikey\Desktop\C#\KUMI-s-Employees\KUMIEmployees\obj\Debug\UserControls\DeleteEmployeeInfo.g.cs
+C:\Users\Mikey\Desktop\C#\KUMI-s-Employees\KUMIEmployees\obj\Debug\UserControls\DeleteEmployeeInfo.baml

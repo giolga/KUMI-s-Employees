@@ -54,8 +54,7 @@
         </Grid>
         
         <Grid Grid.Column="1" Background="#D8E9F7" Name="InfoGrid">
-
-
+            <local:DeleteEmployeeInfo />
         </Grid>
     </Grid>
 </UserControl>
