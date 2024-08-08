@@ -1,4 +1,5 @@
-﻿using System;
+﻿using KUMIEmployees.Model;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,9 +21,37 @@ namespace KUMIEmployees.UserControls
     /// </summary>
     public partial class DeleteEmployeeInfo : UserControl
     {
-        public DeleteEmployeeInfo()
+
+        //public DeleteEmployeeInfo()
+        //{
+        //    InitializeComponent();
+
+        //    DeleteEmployee employee = new DeleteEmployee();
+
+        //    employee.getEmployee += GetEmployee;
+        //}
+
+        private DeleteEmployee deleteEmployee;
+
+        public DeleteEmployeeInfo(DeleteEmployee deleteEmployee)
         {
             InitializeComponent();
+
+            this.deleteEmployee = deleteEmployee;
+            this.deleteEmployee.getEmployee += GetEmployee;
+        }
+
+        public void GetEmployee(Employee employee)
+        {
+            NameTBl.Text = employee.Name;
+            SurenameTBL.Text = employee.Surename;
+            PersonalIDTBL.Text = employee.PersonalId;
+            BirthTBL.Text = employee.BirthDate.ToString().Split(' ')[0];
+            JobPositionTBL.Text = employee.JobPosition.ToString();
+            MobileTBL.Text = employee.Tel;
+            DegreeTBL.Text = employee.Degree.ToString();
+            AddressTBL.Text = employee.Address;
+            BiographyTBL.Text = employee.Biography;
         }
 
         private void DeleteBtn_Click(object sender, RoutedEventArgs e)

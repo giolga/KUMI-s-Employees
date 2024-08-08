@@ -43,6 +43,7 @@ namespace KUMIEmployees.UserControls
             //MessageBox.Show("Saved!");
             addNewEmployee = new Employee();
 
+            #region if_statement
 
             if (NameTB.Text.Trim().Equals(""))
             {
@@ -161,7 +162,7 @@ namespace KUMIEmployees.UserControls
 
                 MessageBox.Show("User successfully added!");
             }
-
+            #endregion
         }
 
 

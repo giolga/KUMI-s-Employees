@@ -1,4 +1,5 @@
-﻿using System;
+﻿using KUMIEmployees.Model;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,16 +21,36 @@ namespace KUMIEmployees.UserControls
     /// </summary>
     public partial class DeleteEmployee : UserControl
     {
+        public delegate void GetEmployeeFromMyCompany(Employee employee);
+        public event GetEmployeeFromMyCompany getEmployee;
         public DeleteEmployee()
         {
             InitializeComponent();
+
         }
 
         private void SearchBtn_Click(object sender, RoutedEventArgs e)
         {
             Button myBtn = new Button() { Content = "Some button", Width = 100, Height = 20 };
 
-            InfoGrid.Children.Add(myBtn);
+            DeleteEmployeeInfo deleteInfo = new DeleteEmployeeInfo(this); // Once I start searching pop up the employee info/UC
+
+            int employeeId = int.Parse(EmployeeId.Text);
+            //MessageBox.Show(employeeId.ToString());
+
+            var employee = MainWindow.employees.FirstOrDefault(emp => emp.Id == employeeId);
+            if (employee == null)
+            {
+                MessageBox.Show($"Employee with the id: {employeeId} doesn't Exists! Try Again!");
+            }
+            else
+            {
+                ProfilePicture.Source = new BitmapImage(new Uri(employee.ImageUrl, UriKind.RelativeOrAbsolute));
+                getEmployee?.Invoke(employee);
+            }
+
+            InfoGrid.Children.Add(deleteInfo);
+
         }
 
         private void SearchBtn_MouseEnter(object sender, MouseEventArgs e)

@@ -17,9 +17,9 @@
 
         <Grid Grid.Column="0"  Background="#D9B8E2">
             <StackPanel Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0, 50, 0, 0">
-                <Image Source="/Images/add-person.png" Width="150"/>
+                <Image Source="/Images/add-person.png" Width="150" Name="ProfilePicture"/>
                 <StackPanel Orientation="Horizontal" Margin="0,20,0,0">
-                    <TextBox Margin="5, 0, 5, 0" Height="35" Name="BirthTB"  Background="#FFE8D6" Width="94" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalContentAlignment="Center" FontSize="16">
+                    <TextBox Margin="5, 0, 5, 0" Height="35" Name="EmployeeId"  Background="#FFE8D6" Width="94" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalContentAlignment="Center" FontSize="16">
                         <TextBox.BorderBrush>
                             <SolidColorBrush Color="Black" />
                         </TextBox.BorderBrush>
@@ -54,7 +54,7 @@
         </Grid>
         
         <Grid Grid.Column="1" Background="#D8E9F7" Name="InfoGrid">
-            <local:DeleteEmployeeInfo />
+            <!--<local:DeleteEmployeeInfo />-->
         </Grid>
     </Grid>
 </UserControl>
