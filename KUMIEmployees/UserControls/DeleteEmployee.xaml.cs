@@ -31,12 +31,10 @@ namespace KUMIEmployees.UserControls
 
         private void SearchBtn_Click(object sender, RoutedEventArgs e)
         {
-            Button myBtn = new Button() { Content = "Some button", Width = 100, Height = 20 };
-
             DeleteEmployeeInfo deleteInfo = new DeleteEmployeeInfo(this); // Once I start searching pop up the employee info/UC
+            InfoGrid.Children.Add(deleteInfo);
 
             int employeeId = int.Parse(EmployeeId.Text);
-            //MessageBox.Show(employeeId.ToString());
 
             var employee = MainWindow.employees.FirstOrDefault(emp => emp.Id == employeeId);
             if (employee == null)
@@ -49,7 +47,6 @@ namespace KUMIEmployees.UserControls
                 getEmployee?.Invoke(employee);
             }
 
-            InfoGrid.Children.Add(deleteInfo);
 
         }
 

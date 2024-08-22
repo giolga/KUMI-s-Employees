@@ -39,6 +39,7 @@ namespace KUMIEmployees.UserControls
 
             this.deleteEmployee = deleteEmployee;
             this.deleteEmployee.getEmployee += GetEmployee;
+
         }
 
         public void GetEmployee(Employee employee)
@@ -54,8 +55,39 @@ namespace KUMIEmployees.UserControls
             BiographyTBL.Text = employee.Biography;
         }
 
+
+        // Remove employee
+        public void DeleteEmployeeFromCompany(Employee employee)
+        {
+            if (employee != null)
+            {
+                // Remove from the global list
+                MainWindow.employees.Remove(employee);
+
+                // Remove from the DataGrid
+                var dataGrid = Application.Current.MainWindow.FindName("ShowAllDG") as DataGrid;
+                if (dataGrid != null)
+                {
+                    dataGrid.Items.Remove(employee);
+                }
+            }
+        }
+
         private void DeleteBtn_Click(object sender, RoutedEventArgs e)
         {
+
+            //MessageBox.Show($"Employee Name and ID {NameTBl.Text} {PersonalIDTBL.Text}");
+            var employeeToDelete = MainWindow.employees.FirstOrDefault(emp => int.Parse(emp.PersonalId) == int.Parse(PersonalIDTBL.Text));
+            if (employeeToDelete != null)
+            {
+                MessageBox.Show($"Employee found: {employeeToDelete.Name}");
+                DeleteEmployeeFromCompany(employeeToDelete);
+                MessageBox.Show("Employee deleted successfully");
+            }
+            else
+            {
+                MessageBox.Show("Employee not found.");
+            }
 
         }
 
