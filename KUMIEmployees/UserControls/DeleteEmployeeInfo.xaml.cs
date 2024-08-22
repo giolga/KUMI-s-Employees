@@ -80,8 +80,8 @@ namespace KUMIEmployees.UserControls
             var employeeToDelete = MainWindow.employees.FirstOrDefault(emp => int.Parse(emp.PersonalId) == int.Parse(PersonalIDTBL.Text));
             if (employeeToDelete != null)
             {
-                MessageBox.Show($"Employee found: {employeeToDelete.Name}");
                 DeleteEmployeeFromCompany(employeeToDelete);
+                deleteEmployee.InfoGrid.Children.Remove(this);
                 MessageBox.Show("Employee deleted successfully");
             }
             else

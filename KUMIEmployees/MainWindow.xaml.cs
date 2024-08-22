@@ -81,6 +81,20 @@ namespace KUMIEmployees
             employees.Add(myEmp);
         }
 
+        public int CalculateAge(DateTime birthDate, DateTime now)
+        {
+            int age = now.Year - birthDate.Year;
+
+            // For leap years we need this
+            if (birthDate > now.AddYears(-age))
+                age--;
+            // Don't use:
+            // if (birthDate.AddYears(age) > now) 
+            //     age--;
+
+            return age;
+        }
+
         public void GetEmp(int empId)
         {
             var myEmp = employees.FirstOrDefault(e => e.Id == empId);
@@ -97,9 +111,9 @@ namespace KUMIEmployees
             getEmploye.MobileTBl.Text = myEmp.Tel;
             getEmploye.EmailTBl.Text = myEmp.Email;
             getEmploye.GenderTBl.Text = myEmp.Gender.ToString();
-            getEmploye.AddressTBl.Text = "Natlughi <3";
+            getEmploye.AddressTBl.Text = myEmp.Address;
             getEmploye.BirthDateTBl.Text = myEmp.BirthDate.ToString();
-            getEmploye.AgeTBl.Text = "21rti";
+            getEmploye.AgeTBl.Text = CalculateAge(myEmp.BirthDate, DateTime.Now).ToString();
             getEmploye.PersonalIdTBl.Text = myEmp.PersonalId;
             getEmploye.UniversityDegreeDBl.Text = myEmp.Degree.ToString();
             getEmploye.JobPositionTBl.Text = myEmp.JobPosition.ToString().Replace('_', ' ');

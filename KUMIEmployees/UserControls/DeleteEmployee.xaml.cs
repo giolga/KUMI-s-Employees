@@ -31,8 +31,6 @@ namespace KUMIEmployees.UserControls
 
         private void SearchBtn_Click(object sender, RoutedEventArgs e)
         {
-            DeleteEmployeeInfo deleteInfo = new DeleteEmployeeInfo(this); // Once I start searching pop up the employee info/UC
-            InfoGrid.Children.Add(deleteInfo);
 
             int employeeId = int.Parse(EmployeeId.Text);
 
@@ -43,6 +41,8 @@ namespace KUMIEmployees.UserControls
             }
             else
             {
+                DeleteEmployeeInfo deleteInfo = new DeleteEmployeeInfo(this); // Once I start searching pop up the employee info/UC
+                InfoGrid.Children.Add(deleteInfo);
                 ProfilePicture.Source = new BitmapImage(new Uri(employee.ImageUrl, UriKind.RelativeOrAbsolute));
                 getEmployee?.Invoke(employee);
             }
