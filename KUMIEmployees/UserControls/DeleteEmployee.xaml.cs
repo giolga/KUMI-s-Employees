@@ -32,19 +32,27 @@ namespace KUMIEmployees.UserControls
         private void SearchBtn_Click(object sender, RoutedEventArgs e)
         {
 
-            int employeeId = int.Parse(EmployeeId.Text);
+            try
+            {
 
-            var employee = MainWindow.employees.FirstOrDefault(emp => emp.Id == employeeId);
-            if (employee == null)
-            {
-                MessageBox.Show($"Employee with the id: {employeeId} doesn't Exists! Try Again!");
+                int employeeId = int.Parse(EmployeeId.Text);
+
+                var employee = MainWindow.employees.FirstOrDefault(emp => emp.Id == employeeId);
+                if (employee == null)
+                {
+                    MessageBox.Show($"Employee with the id: {employeeId} doesn't Exists! Try Again!");
+                }
+                else
+                {
+                    DeleteEmployeeInfo deleteInfo = new DeleteEmployeeInfo(this); // Once I start searching pop up the employee info/UC
+                    InfoGrid.Children.Add(deleteInfo);
+                    ProfilePicture.Source = new BitmapImage(new Uri(employee.ImageUrl, UriKind.RelativeOrAbsolute));
+                    getEmployee?.Invoke(employee);
+                }
             }
-            else
+            catch
             {
-                DeleteEmployeeInfo deleteInfo = new DeleteEmployeeInfo(this); // Once I start searching pop up the employee info/UC
-                InfoGrid.Children.Add(deleteInfo);
-                ProfilePicture.Source = new BitmapImage(new Uri(employee.ImageUrl, UriKind.RelativeOrAbsolute));
-                getEmployee?.Invoke(employee);
+                MessageBox.Show("Insert Id!");
             }
 
 

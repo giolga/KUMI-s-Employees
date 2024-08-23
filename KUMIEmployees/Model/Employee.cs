@@ -9,7 +9,7 @@ namespace KUMIEmployees.Model
 
     public enum Jobs
     {
-        Network_Administrator,
+        Network_Administrator = 0,
         Pentester,
         Software_Developer,
         Software_Engineer,

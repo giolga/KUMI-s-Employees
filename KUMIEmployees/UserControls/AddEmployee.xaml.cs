@@ -152,6 +152,7 @@ namespace KUMIEmployees.UserControls
                 addNewEmployee.Bonus = 150;
                 addNewEmployee.ImageUrl = imageUrl;
                 addNewEmployee.Biography = BiographyTb.Text.ToString();
+                addNewEmployee.Address = AddressTB.Text.ToString();
 
                 addNewEmployeeInMyCompany?.Invoke(addNewEmployee);
 

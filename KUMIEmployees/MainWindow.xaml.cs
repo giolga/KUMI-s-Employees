@@ -67,12 +67,25 @@ namespace KUMIEmployees
 
             for (int i = 0; i < names.Length; i++)
             {
-                Employee emp = new Employee(i + 1, names[i], surenames[i], personalIDs[i] ,$"{names[i][0].ToString().ToLower()}.{surenames[i].ToString().ToLower()}@gmail.com", Jobs.Software_Engineer, "+995557443766", random.Next(1200, 3501), random.Next(100, 551));
+                Jobs position = GetRandomPosition();
+                Employee emp = new Employee(i + 1, names[i], surenames[i], personalIDs[i] ,$"{names[i][0].ToString().ToLower()}.{surenames[i].ToString().ToLower()}@gmail.com", position, "+995557" + random.Next(100000, 999999).ToString(), random.Next(1200, 3501), random.Next(100, 551));
                 ShowAllDG.Items.Add(emp);
                 employees.Add(emp);
             }
 
             //ShowAllDG.Items.RemoveAt(40);
+        }
+
+        public static Jobs GetRandomPosition()
+        {
+            // Get all values of the Position enum
+            Array values = Enum.GetValues(typeof(Jobs));
+
+            // Generate a random index
+            int randomIndex = random.Next(values.Length);
+
+            // Return the value at the random index
+            return (Jobs)values.GetValue(randomIndex);
         }
 
         public void AddEmp(Employee myEmp)
